@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formbell: conditional email alerts for Google Forms</title>
+<meta name="description" content="Formbell sends personalized emails when a Google Forms response matches your rules. Clear pricing, a visible send log, and one-click cancel.">
+<style>
+  :root { --ink:#1f2a24; --muted:#5b6b62; --line:#dde5df; --bg:#f7f9f7; --accent:#2f6b4f; --card:#ffffff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
+  h2 { font-size:1.3rem; margin:40px 0 12px; }
+  p.lead { font-size:1.15rem; color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:14px 0; }
+  .price { display:flex; gap:14px; flex-wrap:wrap; }
+  .price .card { flex:1 1 200px; margin:0; }
+  .price strong { font-size:1.4rem; display:block; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  .note { color:var(--muted); font-size:.95rem; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
+  a { color:var(--accent); }
+  .brand { font-weight:700; font-size:1.05rem; color:var(--accent); margin-bottom:28px; display:block; }
+</style>
+</head>
+<body>
+<main>
+  <span class="brand">Formbell</span>
+  <h1>Send the right email when a Google Form response comes in.</h1>
+  <p class="lead">Formbell is a Google Forms add-on. You set a rule, such as "if the answer to this question is X, email this person", and Formbell sends a personalized email when a matching response arrives.</p>
+  <p class="note">Formbell is preparing for review on the Google Workspace Marketplace. It is not listed yet.</p>
+
+  <h2>What you get</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Conditional rules.</strong> Match on a question's answer (equals, contains, not empty, one of a list) and send to a fixed address or to an email from the response.</li>
+      <li><strong>Personalized emails.</strong> Put response values into the subject and body. Basic HTML is supported.</li>
+      <li><strong>Test before it goes live.</strong> Preview a recent response and send a test to yourself.</li>
+      <li><strong>A send log you can read.</strong> Each send shows one of three states: Google accepted the send request, failed (with a reason), or result unknown. "Accepted" means Google took the request. It does not confirm inbox delivery, and we say so.</li>
+      <li><strong>Resend when needed.</strong> Pick a failed or unknown entry and send it again. Resends are labeled.</li>
+      <li><strong>Your Google sending limits, shown plainly.</strong> Formbell shows Google's remaining recipient count and how many recipients it requested today.</li>
+    </ul>
+  </div>
+
+  <h2>Pricing</h2>
+  <div class="price">
+    <div class="card"><strong>Free</strong>1 rule per Google account. Every condition type is included.</div>
+    <div class="card"><strong>Pro: $4 / month</strong>or $29 / year. Unlimited rules on every form in your Google account, within Google's sending and execution limits.</div>
+  </div>
+  <p class="note">Prices and the free limit are shown inside the add-on before you pay. You can cancel any time from the billing portal, and the cancel link is in the add-on.</p>
+
+  <h2>Your data</h2>
+  <div class="card">
+    <ul>
+      <li>Formbell runs inside your Google account. Form responses are processed there and are not sent to our servers.</li>
+      <li>Rules and the send log are stored with your form. The log keeps up to the latest 200 entries per form for 30 days, and you can delete everything for a form at any time.</li>
+      <li>To check a Pro license, Formbell sends only the license key to our payment provider. It never sends response content or recipient addresses.</li>
+    </ul>
+    <p class="note">Full details: <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+  </div>
+
+  <h2>Honest limits</h2>
+  <div class="card">
+    <ul>
+      <li>Google limits how many emails a script can send per day. Formbell works within those limits and does not promise unlimited sending.</li>
+      <li>Responses that wait more than 48 hours without being processed are not sent automatically. They stay in the log so you can send them yourself.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a><br>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+  </footer>
+</main>
+</body>
+</html>
