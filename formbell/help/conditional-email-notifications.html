@@ -20,6 +20,8 @@
   blockquote p { margin:4px 0; }
   img { display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:8px; margin:22px 0 8px; }
   img.sidebar-example { width:min(100%, 270px); }
+  .preview-frame { width:min(100%, 270px); aspect-ratio:270 / 850; overflow:hidden; border:1px solid var(--line); border-radius:8px; margin:22px 0 8px; }
+  .preview-frame img { width:100%; height:100%; object-fit:cover; object-position:center; border:0; border-radius:0; margin:0; }
   p:has(> em:only-child) { color:var(--muted); font-size:.92rem; }
   table { border-collapse:collapse; width:100%; margin:16px 0; }
   th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
@@ -112,7 +114,7 @@
 <p>On the saved rule, choose <strong>Send me a test</strong>. <strong>Preview before sending</strong> opens inside the sidebar. Its <strong>Response</strong> picker defaults to <strong>Latest matching response</strong>, using the saved rule and the last 30 days of responses. If the completed search finds no match, it shows the latest response and a nonmatching result.</p>
 <p>Check the response date/time. To use a different example, choose an available date in <strong>Response</strong> and wait for its updated preview. The choices are limited, not the full history. If prompted <strong>Choose a response</strong>, select one first. Inspect the subject, body, and match result, and confirm that the test recipient is your own Google account. This self-test always goes to you; a nonmatching example does not prove the automatic rule would send. Previewing alone does not send an email.</p>
 <p>Choose <strong>Send test to myself</strong> once to send the displayed test, or <strong>Cancel</strong> to close without sending. Check the result and the send log before trying again.</p>
-<p><img alt="Example self-test preview showing the response picker and test recipient" class="sidebar-example" src="assets/screenshots/test-preview@2x.png" /></p>
+<p class="preview-frame"><img alt="Example self-test preview showing the response picker and test recipient" src="assets/screenshots/test-preview@2x.png" /></p>
 <p><em>Example product render with sample registration data; the self-test goes to your own address.</em></p>
 <p><strong>Accepted</strong> in Send log means Google accepted the request. It does not confirm inbox delivery. If you also check your own inbox, treat that as a separate check. A test uses Google's sending allowance too.</p>
 <h2>4. Check the condition with a new submission</h2>
