@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="assets/formbell-mark-f2.svg">
 <title>Formbell: conditional email alerts for Google Forms</title>
-<meta name="description" content="Formbell sends personalized emails when a Google Forms response matches your rules. Clear pricing, a visible send log, and one-click cancel.">
+<meta name="description" content="Formbell sends personalized emails when a Google Forms response matches your rules. Clear pricing and a visible send log.">
 <style>
   :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; }
   * { box-sizing:border-box; }
@@ -44,7 +44,7 @@
       <li><strong>Conditional rules.</strong> Match on a question's answer (equals, contains, not empty, one of a list) and send to a fixed address or to an email from the response.</li>
       <li><strong>Personalized emails.</strong> Put response values into the subject and body. Basic HTML is supported.</li>
       <li><strong>Test before it goes live.</strong> Preview a recent response and send a test to yourself.</li>
-      <li><strong>A send log you can read.</strong> Each send shows one of three states: Google accepted the send request, failed (with a reason), or result unknown. "Accepted" means Google took the request. It does not confirm inbox delivery, and we say so.</li>
+      <li><strong>A send log you can read.</strong> Recorded requests can show one of three states: Google accepted the send request, failed (with a reason), or result unknown. "Accepted" means Google took the request. It does not confirm inbox delivery, and we say so.</li>
       <li><strong>Resend when needed.</strong> Pick a failed or unknown entry and send it again. Resends are labeled.</li>
       <li><strong>Your Google sending limits, shown plainly.</strong> Formbell shows Google's remaining recipient count and how many recipients it requested today.</li>
     </ul>
@@ -77,7 +77,7 @@
   <div class="card">
     <ul>
       <li>Google limits how many emails a script can send per day. Formbell works within those limits and does not promise unlimited sending.</li>
-      <li>Responses that wait more than 48 hours without being processed are not sent automatically. They stay in the log so you can send them yourself.</li>
+      <li>Responses observed more than 48 hours after submission are not sent automatically. Retained eligible entries may be available for manual resend.</li>
     </ul>
   </div>
 
