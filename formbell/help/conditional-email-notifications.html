@@ -19,6 +19,7 @@
   blockquote { margin:18px 0; padding:12px 20px; border-left:4px solid #ffb300; background:var(--card); }
   blockquote p { margin:4px 0; }
   img { display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:8px; margin:22px 0 8px; }
+  img.sidebar-example { width:min(100%, 270px); }
   p:has(> em:only-child) { color:var(--muted); font-size:.92rem; }
   table { border-collapse:collapse; width:100%; margin:16px 0; }
   th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
@@ -92,8 +93,8 @@
 </tbody>
 </table>
 <p>For this multiple-choice question, select <strong>Sales</strong> from the comparison-value list. The values come from the question's current choices. For a text question, enter the comparison value exactly; text matching is case-sensitive, and spaces matter. You do not need a second rule just to ignore Support responses.</p>
-<p><img alt="Example rule editor showing a sales condition, a fixed recipient, and an email preview" src="assets/screenshots/01-rule-editor.png" /></p>
-<p><em>Example screen: the form and email address differ from the test details in this guide.</em></p>
+<p><img alt="Example rule editor showing a refund condition, a fixed recipient, and an email preview" src="assets/screenshots/891daf2-rule-editor.png" /></p>
+<p><em>Example product render using a refund rule and sample data; the guide uses a Sales rule.</em></p>
 <h2>2. Write the email</h2>
 <p>Set <strong>Subject</strong> to a simple title such as <strong>New sales inquiry</strong>.</p>
 <p>In <strong>Message</strong>, type the message your teammate needs. New rules use <strong>Plain text</strong>, with paragraphs and line breaks. For example, the final preview could read:</p>
@@ -111,21 +112,21 @@
 <p>On the saved rule, choose <strong>Send me a test</strong>. <strong>Preview before sending</strong> opens inside the sidebar. Its <strong>Response</strong> picker defaults to <strong>Latest matching response</strong>, using the saved rule and the last 30 days of responses. If the completed search finds no match, it shows the latest response and a nonmatching result.</p>
 <p>Check the response date/time. To use a different example, choose an available date in <strong>Response</strong> and wait for its updated preview. The choices are limited, not the full history. If prompted <strong>Choose a response</strong>, select one first. Inspect the subject, body, and match result, and confirm that the test recipient is your own Google account. This self-test always goes to you; a nonmatching example does not prove the automatic rule would send. Previewing alone does not send an email.</p>
 <p>Choose <strong>Send test to myself</strong> once to send the displayed test, or <strong>Cancel</strong> to close without sending. Check the result and the send log before trying again.</p>
-<p><img alt="Formbell sidebar with an active example rule, the alerts switch, and Send me a test" src="assets/screenshots/02-sidebar-home.png" /></p>
-<p><em>Example sidebar; the test preview appears after you choose Send me a test.</em></p>
-<p><strong>Accepted by Google</strong> in Send log means Google accepted the request. It does not confirm inbox delivery. If you also check your own inbox, treat that as a separate check. A test uses Google's sending allowance too.</p>
+<p><img alt="Formbell sidebar with an active example rule, the alerts switch, and Send me a test" class="sidebar-example" src="assets/screenshots/891daf2-sidebar-home.png" /></p>
+<p><em>Example product render using a refund rule and sample data; the test preview appears after you choose Send me a test.</em></p>
+<p><strong>Accepted</strong> in Send log means Google accepted the request. It does not confirm inbox delivery. If you also check your own inbox, treat that as a separate check. A test uses Google's sending allowance too.</p>
 <h2>4. Check the condition with a new submission</h2>
 <p>Keep the rule's fixed address set to yourself for this check. Submit a new response through the form with <strong>Inquiry type: Sales</strong>. Open <strong>Send log</strong>, choose <strong>Refresh</strong>, and look for its <strong>Automatic</strong> entry.</p>
 <p>A response whose inquiry type is <strong>Support</strong> should not match this rule. A nonmatching answer is not an email failure, and it need not create a send-log entry. This rule does not send a notification for every response.</p>
 <p>Once you are satisfied, review the production recipient with your teammate and use <strong>Edit</strong> on the rule to replace the test address with the correct authorized mailbox. Review the change through <strong>Save → Save rule</strong>. Confirm that alerts and the rule you intend to use are enabled.</p>
-<p><img alt="Formbell send log with test requests accepted by Google" src="assets/screenshots/03-send-log.png" /></p>
-<p><em>Example send log. Acceptance does not confirm inbox delivery.</em></p>
+<p><img alt="Example Formbell send log with sample Accepted, Failed, and Unknown records" class="sidebar-example" src="assets/screenshots/891daf2-send-log.png" /></p>
+<p><em>Example product render with sample log records. Acceptance does not confirm inbox delivery.</em></p>
 <h2>Add another route when you need it</h2>
 <p>A single rule has one condition and sends one email. To send Support inquiries to a different address, create a separate Support rule. To send a separate confirmation to the respondent, create a confirmation rule.</p>
 <p>Free lets one selected rule run at a time across your Google account. Pro costs <strong>$4 per month or $29 per year, taxes included</strong> for more rules across that account's forms, within Google's execution and Formbell's storage limits. You can keep using Free if the Sales rule is all you need.</p>
 <h2>If the notification does not appear</h2>
 <p>Check the selected Google account, the form's alert switch, the rule's active/Free status, the answer and selected comparison value, permissions, and the remaining Google allowance. If the sidebar reports that alerts need reconnecting, use <strong>Reconnect alerts</strong> when offered and check the resulting status. Reconnecting does not automatically recover earlier responses; review any retained eligible entries in Send log.</p>
-<p>Read the log before resending. <strong>Result unknown</strong> can mean the earlier request went through, so a manual resend could duplicate it. Resending a retained entry uses the current response and rule, not an archived copy of the original message.</p>
+<p>Read the log before resending. <strong>Unknown</strong> can mean the earlier request went through, so a manual resend could duplicate it. Resending a retained entry uses the current response and rule, not an archived copy of the original message.</p>
 <p>The log retains the latest 200 entries shared by the form's rules, with only entries from the last 30 days available to view or resend, whichever limit is reached first. Automatic processing does not send responses observed more than 48 hours after submission. Do not rely on this workflow for guaranteed inbox delivery or complete historical backfill.</p>
 <p>For written support, email <strong>runredteam@gmail.com</strong>. Please send the step, app version, error code, and UTC time rather than form responses, recipient addresses, or license keys.</p>
 <p>Google Forms is a trademark of Google LLC. Formbell is an independent app by Lazy Labs.</p>
