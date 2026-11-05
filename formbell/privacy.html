@@ -21,7 +21,7 @@
 <main>
   <p><a class="formbell-header" href="./"><img src="assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></a></p>
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: November 3, 2026</p>
+  <p class="muted">Last updated: November 5, 2026</p>
 
   <p>This policy explains how Formbell, a Google Forms add-on made by Lazy Labs ("we"), handles data. Formbell is designed so that your form responses stay inside your Google account.</p>
 
@@ -34,6 +34,7 @@
     <li><strong>Connect to an external service</strong> (script.external_request): only to check a Pro license key with our payment provider.</li>
     <li><strong>Display a sidebar</strong> (script.container.ui): to show Formbell inside Google Forms.</li>
     <li><strong>See your email address</strong> (userinfo.email): to limit test emails to your own address.</li>
+    <li><strong>See your basic profile</strong> (userinfo.profile): listed for installation through Google Workspace Marketplace. Formbell does not read or store your profile.</li>
   </ul>
 
   <h2>2. Where data is processed and stored</h2>
@@ -64,10 +65,21 @@
     <li>You can revoke Formbell's access at any time in your Google Account under Security, Third-party apps with account access.</li>
   </ul>
 
-  <h2>7. Changes</h2>
+  <h2>7. How we protect your data</h2>
+  <p>We treat form responses, recipient addresses, email content and license keys as sensitive data. We protect Google user data and other sensitive data in these ways:</p>
+  <ul>
+    <li><strong>Encryption in transit.</strong> License checks are the only requests Formbell makes outside Google. They use encrypted HTTPS connections to our payment provider, with certificate validation turned on and redirects turned off.</li>
+    <li><strong>Protected storage.</strong> Form responses, rules, email templates, license information and the send log stay in Google's systems under your Google account. Google states that it <a href="https://docs.cloud.google.com/docs/security/encryption/default-encryption">encrypts data it stores at rest</a> and <a href="https://policies.google.com/privacy">uses encryption to keep data private in transit</a>.</li>
+    <li><strong>No Formbell servers or database.</strong> We do not copy your form responses to our own systems. Lazy Labs has no Formbell feature or server for viewing them.</li>
+    <li><strong>Limited access.</strong> Formbell runs only after you grant permission through Google's consent screen. Its form access is limited to the form it is installed in, and you can revoke access at any time.</li>
+    <li><strong>Data minimization.</strong> License checks do not include response content, recipient addresses or email text. Operational logs and support diagnostics exclude them too, as described in section 3.</li>
+    <li><strong>Limited retention and deletion.</strong> The send log is limited as described in section 2, and you can delete Formbell data with the controls described in section 6.</li>
+  </ul>
+
+  <h2>8. Changes</h2>
   <p>If we change this policy, we will update the effective date above and, for material changes, show a notice in the add-on.</p>
 
-  <h2>8. Contact</h2>
+  <h2>9. Contact</h2>
   <p>Lazy Labs, Republic of Korea. Email: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a></p>
 </main>
 </body>
