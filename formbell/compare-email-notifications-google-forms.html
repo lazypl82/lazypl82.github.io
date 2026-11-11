@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Formbell vs Email Notifications for Google Forms: a feature comparison</title>
+<meta name="description" content="Compare Formbell, Digital Inspiration, Form Notify and Form Mailer using official pricing, free limits, conditions and data-handling statements.">
+<link rel="icon" type="image/svg+xml" href="assets/formbell-mark-f2.svg">
+<style>
+  :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
+  h2 { font-size:1.3rem; margin:40px 0 12px; }
+  p.lead { font-size:1.15rem; color:var(--muted); margin:0 0 28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:14px 0; }
+  .price { display:flex; gap:14px; flex-wrap:wrap; }
+  .price .card { flex:1 1 200px; margin:0; }
+  .price strong { font-size:1.4rem; display:block; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  .note { color:var(--muted); font-size:.95rem; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
+  a { color:var(--accent); }
+  .brand { font-weight:700; font-size:1.05rem; color:var(--accent); margin-bottom:28px; display:block; }
+  /* A1 brand: marigold is decorative; links retain dark, underlined text. */
+  h1::after { content:""; display:block; width:42px; height:4px; border-radius:3px; background:#ffb300; margin-top:14px; }
+  a:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
+  .brand, .formbell-header { display:flex; align-items:center; gap:10px; }
+  .brand img, .formbell-header img { width:32px; height:32px; flex:none; }
+
+main { max-width:1120px; } .table-scroll { overflow-x:auto; } table { width:100%; min-width:850px; border-collapse:collapse; background:var(--card); } th,td { padding:16px; border:1px solid var(--line); text-align:left; vertical-align:top; } thead th { background:#fff4d6; } th[scope=row] { min-width:170px; } td { min-width:170px; } caption { text-align:left; margin:16px 0; font-weight:600; } .sources { font-size:.92rem; } .sources li { margin:12px 0; } .table-scroll:focus { outline:2px solid var(--accent); }
+</style>
+</head>
+<body><main>
+<a class="brand" href="./"><img src="assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></a>
+<h1>Formbell vs Email Notifications for Google Forms</h1>
+<p class="lead">A comparison with Digital Inspiration, Form Notify and Form Mailer, focused on the first email rule you need.</p>
+<p>Written by Lazy Labs, the maker of Formbell. We checked the official pages linked below on November 11, 2026. This is a documentation comparison, not a hands-on test of the other apps. Prices and features can change.</p>
+<p>If you only need an email telling you that a response arrived, first consider Google Forms’ built-in response notifications. An add-on is useful when you need personalized content or answer-based routing.</p>
+<div class="table-scroll" role="region" aria-label="Email notification app comparison" tabindex="0">
+<table>
+<caption>Officially published plans and capabilities. On smaller screens, scroll horizontally.</caption>
+<thead><tr><th scope="col">App</th><th scope="col">Price</th><th scope="col">Free allowance</th><th scope="col">Conditions available for free</th><th scope="col">Response data processing and storage</th></tr></thead>
+<tbody>
+<tr><th scope="row">Formbell</th><td>Free; Pro $4/month or $29/year, taxes included, per Google account. Checkout may show local currency. <a href="#s-fb">[1]</a></td><td>One selected rule runs at a time across your account. Google sending and execution limits and Formbell storage limits apply. <a href="#s-fb">[1]</a></td><td>Equals, contains, is not empty, and one of a list. One condition per rule. <a href="#s-fb">[1]</a></td><td>Responses are processed in Google Apps Script under your account. Response content is not sent to Lazy Labs servers or in Dodo license checks. Emails go to your configured recipients. <a href="#s-fb">[1]</a></td></tr>
+<tr><th scope="row">Email Notifications for Google Forms<br><small>Digital Inspiration</small></th><td>Free; Standard $49.95/year; Enterprise $79.95/year. Tax treatment is not stated on the compared pricing page. <a href="#s-di">[2]</a></td><td>20 emails/day and a single notification. The free notification includes an email footer brand. <a href="#s-di-limits">[3]</a></td><td>No answer-based conditional notifications in Free. Paid plans include conditions; the product page describes AND/OR and regex matching. <a href="#s-di-limits">[3]</a> <a href="#s-di">[2]</a></td><td>The vendor says add-on data stays in your Google account and is not stored on its servers. Configured email recipients and integrations still receive what you send. <a href="#s-di">[2]</a></td></tr>
+<tr><th scope="row">Form Notify</th><td>Free; currently displayed monthly price $6.99 and annual price $34.99 USD. The page also shows $7.99 and $47.99 as discount-reference prices. Tax treatment and offer end date are not stated. <a href="#s-fn-price">[4]</a></td><td>50 emails, with all features available to try. The page does not state when, or whether, this allowance resets. <a href="#s-fn-price">[4]</a></td><td>Conditions are included under the all-features free offer. Docs describe answer-based checks and duplicate/nonduplicate checks; duplicate checks require responses in a Google Sheet. A complete operator list is not specified in the linked text. <a href="#s-fn-price">[4]</a> <a href="#s-fn-condition">[5]</a></td><td>The policy says business data is stored in your Google account, with settings in Google property/application storage. It also discloses operational logs. This does not establish that configured external integrations keep data inside Google. <a href="#s-fn-data">[6]</a></td></tr>
+<tr><th scope="row">Form Mailer<br><small>NexergenLabs</small></th><td>Marketplace lists it as free of charge. No paid price is stated there. <a href="#s-fm-list">[7]</a></td><td>Docs state Google quotas of 100 emails/day for personal Gmail and 1,500/day for Workspace. No separate commercial free rule cap is specified in the reviewed pages. <a href="#s-fm-faq">[8]</a></td><td>The free listing advertises conditional logic. Docs list equals, not equals, contains, starts with, is empty, is not empty, and AND/OR combinations. Availability is based on those documents, not an installation test. <a href="#s-fm-list">[7]</a> <a href="#s-fm-condition">[9]</a></td><td>The FAQ says responses are processed to generate emails, not stored on external servers, and emails are sent through your Google account. <a href="#s-fm-faq">[8]</a></td></tr>
+</tbody></table></div>
+<p class="note">Free rule counts and free email counts measure different things. They are not interchangeable. Google quotas also depend on the account and sending method; this table does not promise equivalent sending capacity. Data-handling entries summarize vendor statements, not independent security audits.</p>
+<p class="note">Form Notify’s older Google Sites pricing page still lists $3.99/month and $29.99/year. We use the current destination of the pricing link in its Marketplace description instead. Confirm the price in the add-on before buying. <a href="#s-fn-old">[10]</a></p>
+<h2>Where another app may fit better</h2>
+<ul>
+<li><strong>More conditions in one rule:</strong> Formbell uses one condition per rule. Digital Inspiration advertises AND/OR and regex; Form Mailer documents AND/OR and additional text operators. <a href="#s-di">[2]</a> <a href="#s-fm-condition">[9]</a></li>
+<li><strong>Other channels and attachments:</strong> Formbell has no native Slack or SMS notifications and no file attachments. Digital Inspiration documents integrations and paid attachment/SMS features. Form Mailer supports form-upload attachments and CC/BCC. Formbell sends to one address per rule and has no CC/BCC fields. <a href="#s-di">[2]</a> <a href="#s-di-limits">[3]</a> <a href="#s-fm-faq">[8]</a></li>
+<li><strong>Automatic recovery after quota exhaustion:</strong> Form Mailer says it queues emails for the next day. Formbell does not promise that recovery: inspect a retained failed entry and manually resend when offered. <a href="#s-fm-faq">[8]</a> <a href="help/personalized-confirmation-email.html">Formbell resend guidance</a>.</li>
+<li><strong>A free app with multiple rules:</strong> Form Mailer documents multiple rules and is listed as free. Formbell’s free allowance runs one selected rule; Pro is needed to run more. <a href="#s-fm-list">[7]</a> <a href="#s-fm-condition">[9]</a></li>
+</ul>
+<h2>When Formbell fits</h2>
+<p>Consider Formbell when one answer-based rule, a personalized email, previewing and an explicit send log cover your workflow. Every condition type is available on Free. Accepted means Google accepted the request, not that it reached the inbox.</p>
+<p>Pro subscriptions renew monthly or annually until cancelled. See <a href="terms.html">plans, cancellation and statutory rights</a> before buying.</p>
+<p>Install Formbell: <span data-install-placeholder="true">[MARKETPLACE_URL]</span></p>
+<h2>Sources and check times</h2>
+<p class="note">All times below are UTC on November 11, 2026. Unknown details are left unknown rather than treated as missing features.</p>
+<ol class="sources">
+<li id="s-fb">Formbell: <a href="./">product and pricing</a>, <a href="privacy.html">privacy</a>, <a href="help/conditional-email-notifications.html">conditions</a>. Checked 01:20:13–01:20:33; condition operators also checked against operational source 71fb15d.</li>
+<li id="s-di"><a href="https://digitalinspiration.com/product/google-forms-notifications">Digital Inspiration product, pricing and data FAQ</a>. Checked 02:24:22.</li>
+<li id="s-di-limits"><a href="https://digitalinspiration.com/docs/form-notifications/google-forms-premium">Digital Inspiration free/premium comparison</a>. Checked 02:24:22.</li>
+<li id="s-fn-price"><a href="https://formnotify.com/products/formnotify/pricing/">Form Notify current pricing</a>, reached from <a href="https://formnotify.com/pricing/">its pricing redirect</a>. Checked 02:25:01.</li>
+<li id="s-fn-condition"><a href="https://sites.google.com/formnotify.com/home/doc/conditions">Form Notify conditions</a>. Checked 02:24:24.</li>
+<li id="s-fn-data"><a href="https://formnotify.com/policy/">Form Notify privacy policy</a>. Checked 02:24:24.</li>
+<li id="s-fm-list"><a href="https://workspace.google.com/marketplace/app/form_mailer_email_notifications_for_goog/567245063329">Form Mailer official Marketplace listing</a>. Checked 02:24:26.</li>
+<li id="s-fm-faq"><a href="https://docs.nexergenlabs.com/formmailer/faq/">Form Mailer FAQ</a>. Checked 02:24:27.</li>
+<li id="s-fm-condition"><a href="https://docs.nexergenlabs.com/formmailer/conditional-emails/">Form Mailer conditions</a>. Checked 02:24:29.</li>
+<li id="s-fn-old"><a href="https://sites.google.com/formnotify.com/home/doc/pricing">Form Notify older Google Sites price page</a>. Checked 02:24:23.</li>
+</ol>
+<footer>Formbell is made by Lazy Labs. Other product names belong to their owners. Google Forms is a trademark of Google LLC. Formbell is an independent app.<br><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer>
+</main></body></html>
