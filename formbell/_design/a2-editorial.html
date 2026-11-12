@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Direction A2 · Editorial recipes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* 8px rhythm: body 20/32, every vertical gap is a multiple of 8. */
+  :root { --ink:#1b1b1d; --soft:#55585f; --rule:#e5e1d8; --paper:#fbfaf6; --marigold:#ffb300; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--paper); color:var(--ink); font-family:"Newsreader", Georgia, serif; font-size:20px; line-height:32px; font-optical-sizing:auto; }
+  .top { max-width:1040px; margin:0 auto; padding:24px 32px; display:flex; align-items:center; justify-content:space-between; font:500 14px/24px Inter, system-ui, sans-serif; }
+  .top a { color:var(--ink); text-decoration:none; }
+  .mark { display:flex; align-items:center; gap:8px; font-weight:600; }
+  .mark img { width:24px; height:24px; }
+  .top nav { display:flex; gap:24px; }
+  .top nav a { color:var(--soft); }
+  article { max-width:640px; margin:0 auto; padding:64px 24px 96px; }
+  .kicker { font:600 14px/24px Inter, system-ui, sans-serif; color:var(--soft); margin-bottom:16px; }
+  h1 { font-weight:500; font-size:48px; line-height:56px; letter-spacing:-.015em; margin-bottom:24px; }
+  .dek { font-size:22px; line-height:32px; color:var(--soft); margin-bottom:16px; }
+  p { margin-bottom:16px; }
+  .soft { color:var(--soft); font-size:18px; line-height:32px; }
+  figure { margin:48px 0 0; }
+  figure img { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 1px 0 rgba(0,0,0,.05), 0 16px 40px -24px rgba(27,27,29,.35); }
+  figcaption { font:400 14px/24px Inter, system-ui, sans-serif; color:var(--soft); margin-top:16px; }
+  section { margin-top:80px; padding-top:32px; border-top:1px solid var(--rule); }
+  .num { font:600 14px/24px Inter, system-ui, sans-serif; display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+  .num::before { content:""; width:16px; height:3px; background:var(--marigold); border-radius:2px; }
+  h2 { font-weight:500; font-size:32px; line-height:40px; letter-spacing:-.01em; margin-bottom:8px; }
+  h3 { font-style:italic; font-weight:400; font-size:20px; line-height:32px; margin:32px 0 8px; }
+  .need { list-style:none; padding:0; margin:0; }
+  .need li { display:flex; gap:16px; border-bottom:1px solid var(--rule); padding:8px 0 7px; }
+  .need li:first-child { border-top:1px solid var(--rule); padding-top:7px; }
+  .need .q { flex:0 0 168px; }
+  .need .t { color:var(--soft); font-style:italic; }
+  .method { padding-left:24px; margin:0; }
+  .method li { padding-left:8px; margin-bottom:8px; }
+  .rule { font-size:24px; line-height:32px; margin:24px 0 24px; }
+  .rule i { font-style:italic; }
+  .after { margin-top:24px; }
+  .cta { margin-top:64px; display:flex; flex-wrap:wrap; align-items:center; gap:16px; font:500 15px/24px Inter, system-ui, sans-serif; }
+  .cta a { background:var(--ink); color:#fff; text-decoration:none; padding:12px 24px; border-radius:999px; }
+  .cta span { color:var(--soft); }
+  a { color:var(--ink); text-decoration-thickness:1px; text-underline-offset:4px; }
+  footer { max-width:640px; margin:0 auto; padding:32px 24px 64px; border-top:1px solid var(--rule); font:400 13px/24px Inter, system-ui, sans-serif; color:var(--soft); }
+  @media (max-width:640px) { body { font-size:18px; line-height:28px; } h1 { font-size:36px; line-height:44px; } h2 { font-size:26px; line-height:32px; } .top nav { display:none; } .need li { flex-direction:column; gap:0; } .need .q { flex:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="">Formbell</a>
+  <nav><a href="../help/conditional-email-notifications.html">Guides</a><a href="../index.html">Pricing</a><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a></nav>
+</header>
+<article>
+  <p class="kicker">Recipes</p>
+  <h1>Three forms that email the right person, and only them</h1>
+  <p class="dek">Each recipe is a few Google Forms™ questions and one Formbell rule. Formbell sends the email automatically, but only when an answer matches.</p>
+  <p class="soft">On the free plan you can run one rule at a time across your Google account. Running several routes at once needs Pro.</p>
+
+  <figure>
+    <img src="../help/assets/screenshots/891daf2-rule-editor.png" width="760" height="620" alt="The Formbell rule editor with a refund rule and a live preview of the email">
+    <figcaption>A finished rule in the Formbell editor, with the email preview on the right.</figcaption>
+  </figure>
+
+  <section>
+    <p class="num">Recipe 1</p>
+    <h2>Refund requests go to billing</h2>
+    <p>Your billing inbox gets refund requests, and nothing else.</p>
+    <h3>You'll need</h3>
+    <ul class="need">
+      <li><span class="q">Request type</span><span class="t">multiple choice: Refund, Sales, Support</span></li>
+      <li><span class="q">Order number</span><span class="t">short answer</span></li>
+      <li><span class="q">Name</span><span class="t">short answer</span></li>
+      <li><span class="q">Message</span><span class="t">paragraph</span></li>
+    </ul>
+    <h3>The rule</h3>
+    <p class="rule">When <i>Request type</i> is <i>Refund</i>, email your billing address.</p>
+    <p>Put the order number in the subject. Add the name, order number and message to the body with Insert answer.</p>
+    <p class="soft after">Formbell only sends the email. You still approve and process the refund yourself.</p>
+  </section>
+
+  <section>
+    <p class="num">Recipe 2</p>
+    <h2>Confirm event registrations</h2>
+    <p>When someone says yes, they get an email that names the session they picked.</p>
+    <h3>You'll need</h3>
+    <ul class="need">
+      <li><span class="q">Attendance</span><span class="t">multiple choice: Yes, No</span></li>
+      <li><span class="q">Name</span><span class="t">short answer</span></li>
+      <li><span class="q">Session</span><span class="t">multiple choice or dropdown</span></li>
+    </ul>
+    <h3>The rule</h3>
+    <p class="rule">When <i>Attendance</i> is <i>Yes</i>, email the person who filled in the form.</p>
+    <p>If your form collects email addresses, choose the email Google Forms collects. If it doesn't, add a short-answer Email question with email validation and choose that instead.</p>
+    <p class="soft after">Say you received their registration. Don't promise a seat or a payment the form can't check.</p>
+  </section>
+
+  <section>
+    <p class="num">Recipe 3</p>
+    <h2>Send each inquiry to the right person</h2>
+    <p>Sales questions go to sales, and support questions go to support.</p>
+    <h3>You'll need</h3>
+    <ul class="need">
+      <li><span class="q">Request type</span><span class="t">multiple choice: Sales, Support, Billing</span></li>
+      <li><span class="q">Name</span><span class="t">short answer</span></li>
+      <li><span class="q">Message</span><span class="t">paragraph</span></li>
+    </ul>
+    <h3>The rules</h3>
+    <ol class="method">
+      <li>When <i>Request type</i> is <i>Sales</i>, email your sales address.</li>
+      <li>When <i>Request type</i> is <i>Support</i>, email your support address.</li>
+      <li>When <i>Request type</i> is <i>Billing</i>, email your billing address.</li>
+    </ol>
+    <p class="soft after">On Free you can run one route at a time. All three together needs Pro, $4 a month or $29 a year, taxes included.</p>
+  </section>
+
+  <div class="cta"><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install Formbell</a><span>Free plan included</span></div>
+</article>
+<footer>Formbell is made by Lazy Labs, Republic of Korea. Google Forms is a trademark of Google LLC.</footer>
+</body>
+</html>
