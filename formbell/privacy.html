@@ -47,6 +47,7 @@
 
   <h2>4. Payments</h2>
   <p>Pro subscriptions are sold by Dodo Payments as merchant of record. Dodo Payments collects and processes billing information under its <a href="https://dodopayments.com/legal/privacy-policy">privacy policy</a>. We receive order and subscription records from Dodo Payments, such as your billing email, plan and payment status, to provide support and manage your license.</p>
+  <p>After checkout, Dodo Payments may send you back to a Formbell page on formbell.app with your license key, your billing email and order identifiers in the web address. The page's script tries to remove these details from the address bar. It shows the key for you to copy only if removal succeeds and the details pass its format checks. The page's script doesn't send these details in any further network request. Your first request for that page reaches our web host, GitHub Pages, before the page can remove these details, and GitHub may log requests under its own policies.</p>
 
   <h2>5. Use of Google user data</h2>
   <p>Formbell's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not sell data, use it for advertising, or use it to train AI models. Humans at Lazy Labs do not read your form data, except when you share it with us for support.</p>
@@ -61,8 +62,8 @@
   <h2>7. How we protect your data</h2>
   <p>We treat form responses, recipient addresses, email content and license keys as sensitive data. We protect Google user data and other sensitive data in these ways:</p>
   <ul>
-    <li><strong>Encryption in transit.</strong> License checks are the only requests Formbell makes outside Google. They use encrypted HTTPS connections to our payment provider, with certificate validation turned on and redirects turned off.</li>
-    <li><strong>Protected storage.</strong> Form responses, rules, email templates, license information and the send log stay in Google's systems under your Google account. Google states that it <a href="https://docs.cloud.google.com/docs/security/encryption/default-encryption">encrypts data it stores at rest</a> and <a href="https://policies.google.com/privacy">uses encryption to keep data private in transit</a>.</li>
+    <li><strong>Encryption in transit.</strong> License checks are the only requests the add-on makes outside Google. They use encrypted HTTPS connections to our payment provider, with certificate validation turned on and redirects turned off.</li>
+    <li><strong>Protected storage.</strong> In the add-on, form responses, rules, email templates, license information and the send log stay in Google's systems under your Google account. Google states that it <a href="https://docs.cloud.google.com/docs/security/encryption/default-encryption">encrypts data it stores at rest</a> and <a href="https://policies.google.com/privacy">uses encryption to keep data private in transit</a>.</li>
     <li><strong>No Formbell servers or database.</strong> We do not copy your form responses to our own systems. Lazy Labs has no Formbell feature or server for viewing them.</li>
     <li><strong>Limited access.</strong> Formbell runs only after you grant permission through Google's consent screen. Its form access is limited to the form it is installed in, and you can revoke access at any time.</li>
     <li><strong>Data minimization.</strong> License checks do not include response content, recipient addresses or email text. Operational logs and support diagnostics exclude them too, as described in section 3.</li>

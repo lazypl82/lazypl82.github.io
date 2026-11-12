@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-9ItH8Er1gs6afZGHfkfAnPDARs35XY2znfvGqrbXQ4M='; style-src 'sha256-9oW4T6Td+R8QhbMfz9zJ2oEcWASiOr8GgihdrKTMIWg='; img-src data:; font-src 'self'; connect-src 'none'; object-src 'none'; form-action 'none'; base-uri 'none'">
+<script>(()=>{
+  'use strict';
+  let query=location.search,clean=false;
+  try{history.replaceState(null,'','/formbell/thank-you.html');clean=true}catch{query=''}
+  const fallback='Check the email from Dodo Payments for your license key.';
+  function fitFields(){
+    for(const field of document.querySelectorAll('#keys textarea')){
+      field.rows=1;
+      while(field.rows<20&&field.scrollHeight>field.clientHeight+2)field.rows++;
+    }
+  }
+  function reset(){
+    query='';
+    for(const field of document.querySelectorAll('#keys textarea'))field.value='';
+    document.getElementById('keys')?.replaceChildren();
+    const panel=document.getElementById('licensePanel'),note=document.getElementById('fallback'),status=document.getElementById('copyStatus');
+    if(panel)panel.hidden=true;
+    if(note){note.hidden=false;note.textContent=fallback}
+    if(status)status.textContent='';
+  }
+  function keysFromQuery(raw){
+    if(!raw||new TextEncoder().encode(raw).length>8192||/%(?![0-9a-f]{2})/i.test(raw))return null;
+    const params=new URLSearchParams(raw),seen=new Set();
+    for(const [name,value]of params){
+      if(seen.has(name)||/[\u0000-\u001f\u007f\ufffd]/u.test(name+value))return null;
+      seen.add(name);
+    }
+    const status=params.get('status'),payment=params.get('payment_id'),subscription=params.get('subscription_id');
+    if(status==='active'){
+      if(!subscription||!subscription.trim()||params.has('payment_id'))return null;
+    }else if(status==='succeeded'){
+      if(!payment||!payment.trim()||params.has('subscription_id'))return null;
+    }else return null;
+    const supplied=params.get('license_key');
+    if(!supplied)return null;
+    const keys=supplied.split(',').map(key=>key.trim());
+    if(keys.length>20||new Set(keys).size!==keys.length||keys.some(key=>!/^[A-Za-z0-9_-]{16,200}$/.test(key)))return null;
+    return keys;
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    let keys=clean?keysFromQuery(query):null;
+    query='';
+    if(!keys)return;
+    const container=document.getElementById('keys'),status=document.getElementById('copyStatus');
+    for(let index=0;index<keys.length;index++){
+      const row=document.createElement('div');row.className='key-row';
+      const label=document.createElement('label'),field=document.createElement('textarea'),button=document.createElement('button');
+      field.id='license-key-'+(index+1);field.readOnly=true;field.autocomplete='off';field.spellcheck=false;
+      field.rows=Math.ceil(keys[index].length/20);field.value=keys[index];
+      label.htmlFor=field.id;label.textContent=keys.length===1?'License key':'License key '+(index+1);
+      button.type='button';button.className=keys.length===1?'primary':'secondary';button.textContent='Copy key';
+      button.setAttribute('aria-label',keys.length===1?'Copy key':'Copy license key '+(index+1));
+      button.addEventListener('click',async()=>{
+        status.textContent='';
+        if(!field.value)return;
+        try{await navigator.clipboard.writeText(field.value);if(field.value)status.textContent='Copied.'}
+        catch{if(field.value){field.focus();field.select();status.textContent='Select the key and copy it.'}}
+      });
+      row.append(label,field,button);container.append(row);
+    }
+    keys.fill('');keys=null;
+    document.getElementById('fallback').hidden=true;document.getElementById('licensePanel').hidden=false;fitFields();
+  },{once:true});
+  addEventListener('resize',fitFields);
+  addEventListener('pagehide',reset);
+  addEventListener('pageshow',event=>{if(event.persisted)reset()});
+})();</script>
+<title>Your Formbell license key</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<style>@font-face{font-family:"Newsreader";font-weight:500;font-display:swap;src:url("/formbell/assets/fonts/newsreader-latin-500-normal.woff2") format("woff2")}@font-face{font-family:"Newsreader";font-weight:400;font-display:swap;src:url("/formbell/assets/fonts/newsreader-latin-400-normal.woff2") format("woff2")}@font-face{font-family:"Inter";font-weight:500;font-display:swap;src:url("/formbell/assets/fonts/inter-latin-500-normal.woff2") format("woff2")}@font-face{font-family:"Inter";font-weight:600;font-display:swap;src:url("/formbell/assets/fonts/inter-latin-600-normal.woff2") format("woff2")}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:#fbfaf6;color:#1b1b1d;font:20px/32px "Newsreader",Georgia,"Times New Roman",serif}.top{max-width:1040px;margin:0 auto;padding:24px 32px;display:flex;align-items:center;gap:8px;font:600 14px/24px "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}.mark{display:block;width:24px;height:24px;flex:none}main{max-width:640px;margin:0 auto;padding:64px 24px 96px}h1{font-weight:500;font-size:40px;line-height:48px;letter-spacing:-.015em;margin:0 0 16px}p{margin:0}.instructions{color:#55585f;margin-bottom:32px}#fallback{font-size:22px;line-height:32px}.key-row{display:grid;gap:8px;margin-top:24px}.key-row:first-child{margin-top:0}label{font:600 14px/24px "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}textarea{display:block;width:100%;padding:12px 16px;border:1px solid #c9c3b6;border-radius:8px;resize:none;background:#fff;color:#1b1b1d;overflow-wrap:anywhere;word-break:break-all;white-space:pre-wrap;font:15px/24px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}button{justify-self:start;padding:12px 24px;border:1px solid #1b1b1d;border-radius:999px;font:500 15px/24px "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}.primary{background:#1b1b1d;color:#fff}.primary:hover{background:#000}.secondary{background:transparent;color:#1b1b1d}.secondary:hover{background:#f1eee6}a{color:#1b1b1d;text-decoration-thickness:1px;text-underline-offset:4px}button:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #1b1b1d;outline-offset:2px;box-shadow:0 0 0 4px #ffb300}#copyStatus{font:400 14px/24px "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;color:#55585f;margin-top:16px;min-height:24px}.help{font-size:18px;line-height:32px;color:#55585f;margin-top:16px}[hidden]{display:none!important}@media(max-width:640px){body{font-size:18px;line-height:28px}.top{padding:16px 20px}main{padding:40px 20px 80px}h1{font-size:32px;line-height:40px}#fallback{font-size:20px;line-height:28px}.help{font-size:16px;line-height:28px}}</style>
+</head>
+<body>
+<header class="top"><svg class="mark" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512"><rect width="64" height="64" rx="14" fill="#1C1C1E"/><g transform="translate(-1 0)"><path d="M19 50V27A13 13 0 0 1 32 14H47V25H34A4 4 0 0 0 30 29V50Z" fill="#F7F5F0"/><path d="M30 31H45A15 15 0 0 1 30 46Z" fill="#FFB300"/></g></svg><span>Formbell</span></header>
+<main>
+<p id="fallback">Check the email from Dodo Payments for your license key.</p>
+<section id="licensePanel" hidden aria-labelledby="licenseTitle">
+<h1 id="licenseTitle">Your Formbell license key</h1>
+<p class="instructions">Copy your key, then open Plan in Formbell and choose Connect license.</p>
+<div id="keys"></div>
+<p id="copyStatus" role="status" aria-live="polite"></p>
+<p class="help">Need help? Email <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a>.</p>
+</section>
+</main>
+</body>
+</html>
