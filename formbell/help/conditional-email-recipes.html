@@ -5,126 +5,134 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="../assets/formbell-mark-f2.svg">
 <title>3 answer-based email recipes for Google Forms | Formbell</title>
-<meta name="description" content="Three ready-to-build Google Forms recipes that automatically email someone only when an answer matches: a refund request router, an event registration confirmation, and inquiry routing.">
+<meta name="description" content="Three Google Forms recipes that automatically email someone only when an answer matches: route refund requests, confirm event registrations, and send inquiries to the right person.">
 <style>
-  :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; }
+  :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; --cond:#fff6dc; --cond-line:#f3e2a8; }
   * { box-sizing:border-box; }
   body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
-  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  main { max-width:720px; margin:0 auto; padding:48px 20px 64px; }
   h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
-  h2 { font-size:1.3rem; margin:44px 0 12px; }
-  h3 { font-size:1.05rem; margin:24px 0 8px; }
+  h2 { font-size:1.35rem; line-height:1.3; margin:0 0 6px; }
+  h3 { font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:22px 0 8px; }
   p { margin:12px 0; }
   a { color:var(--accent); }
-  .brand { font-weight:700; font-size:1.05rem; color:var(--accent); margin-bottom:28px; display:block; }
+  .brand { font-weight:700; font-size:1.05rem; color:var(--accent); margin-bottom:28px; display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .brand img { width:32px; height:32px; flex:none; }
   .lead { font-size:1.12rem; color:var(--muted); }
-  .note { color:var(--muted); font-size:.95rem; }
-  blockquote { margin:18px 0; padding:12px 20px; border-left:4px solid #ffb300; background:var(--card); }
-  blockquote p { margin:4px 0; }
-  table { border-collapse:collapse; width:100%; margin:16px 0; background:var(--card); }
-  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-  th { background:#fafafb; }
-  li { margin:6px 0; }
+  .muted { color:var(--muted); font-size:.95rem; }
+  .recipe { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin:28px 0; }
+  .recipe .what { margin:0; color:var(--muted); }
+  .fields { list-style:none; padding:0; margin:0; }
+  .fields li { display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-top:1px solid #eef0f2; }
+  .fields li:first-child { border-top:0; }
+  .fields .name { font-weight:600; }
+  .fields .type { font-size:.85rem; color:var(--muted); text-align:right; }
+  .rule { display:grid; grid-template-columns:72px 1fr; gap:8px 12px; align-items:center; }
+  .rule .label { font-size:.85rem; font-weight:600; color:var(--muted); }
+  .chip { display:inline-block; padding:8px 12px; border-radius:8px; border:1px solid var(--line); background:#fff; font-size:.95rem; }
+  .chip.cond { background:var(--cond); border-color:var(--cond-line); }
+  .chip strong { font-weight:700; }
+  .arrow { grid-column:2; color:var(--muted); font-size:.9rem; padding-left:14px; line-height:1; }
+  .extra { margin:14px 0 0; padding:0; list-style:none; }
+  .extra li { margin:6px 0; }
+  .extra b { font-weight:600; }
+  .tip { margin:16px 0 0; padding:10px 14px; border-left:3px solid #ffb300; background:#fffcf3; font-size:.95rem; }
+  .routes { display:grid; gap:10px; }
+  .routes .route { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+  .routes .to { color:var(--muted); font-size:.9rem; }
+  ol.steps { padding-left:22px; }
+  ol.steps li { margin:8px 0; }
   .install { display:inline-block; background:#1c1c1e; color:#fff; text-decoration:none; font-weight:600; padding:12px 20px; border-radius:8px; }
   .install:hover { background:#000; }
-  .install:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
+  .install:focus-visible, a:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
-  /* A1 brand: marigold is decorative; links retain dark, underlined text. */
   h1::after { content:""; display:block; width:42px; height:4px; border-radius:3px; background:#ffb300; margin-top:14px; }
-  a:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
-  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; }
-  .brand img { width:32px; height:32px; flex:none; }
+  @media (max-width:520px) { .rule { grid-template-columns:1fr; } .arrow { grid-column:1; } .fields li { flex-direction:column; gap:2px; } .fields .type { text-align:left; } }
 </style>
 </head>
 <body>
 <main>
   <a class="brand" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></a>
   <h1>3 answer-based email recipes for Google Forms™</h1>
-  <p class="lead">Each recipe automatically emails someone only when an answer matches. Formbell's free plan includes conditional rules: 1 rule at a time across your Google account, with every condition type. Start with one route on Free; running several routes together needs Pro.</p>
-  <p class="note">These recipes do not include preconfigured Formbell rules. Create the questions in your own form, then create the rule in Formbell for that form.</p>
+  <p class="lead">In each recipe, Formbell emails someone automatically, but only when an answer matches. You build the form, then add one rule in Formbell.</p>
+  <p class="muted">On the free plan, you can run 1 rule at a time across your Google account, and you get every condition type. To run several routes at once, you need Pro.</p>
 
-  <h2 id="refund-router">1. Refund request router</h2>
-  <p>Send refund requests to billing. Other request types are not emailed by this rule.</p>
-  <h3>Questions</h3>
-  <table>
-    <thead><tr><th>Question</th><th>Type</th><th>Used for</th></tr></thead>
-    <tbody>
-      <tr><td>Request type</td><td>Multiple choice or dropdown, required: Refund / Sales / Support</td><td>The condition</td></tr>
-      <tr><td>Order number</td><td>Short answer, required</td><td>Subject and message</td></tr>
-      <tr><td>Name</td><td>Short answer</td><td>Message</td></tr>
-      <tr><td>Message</td><td>Paragraph</td><td>The reason for the refund</td></tr>
-    </tbody>
-  </table>
-  <h3>Rule</h3>
-  <ul>
-    <li><strong>When:</strong> Request type is Refund</li>
-    <li><strong>Send to:</strong> This address, for example your billing inbox</li>
-    <li><strong>Subject:</strong> "Refund request for" + the Order number answer, added with <strong>Insert answer</strong></li>
-    <li><strong>Message:</strong> the Name, Order number and Message answers</li>
-  </ul>
-  <p class="note">Email collection is not needed, because the email goes to a fixed address. Formbell sends the request email only. It does not approve or process refunds.</p>
+  <section class="recipe" id="refund-router">
+    <h2>Refund requests go to billing</h2>
+    <p class="what">Your billing inbox gets refund requests, and nothing else.</p>
+    <h3>Form questions</h3>
+    <ul class="fields">
+      <li><span class="name">Request type</span><span class="type">Multiple choice, required · Refund / Sales / Support</span></li>
+      <li><span class="name">Order number</span><span class="type">Short answer, required</span></li>
+      <li><span class="name">Name</span><span class="type">Short answer</span></li>
+      <li><span class="name">Message</span><span class="type">Paragraph</span></li>
+    </ul>
+    <h3>Formbell rule</h3>
+    <div class="rule">
+      <span class="label">When</span><span><span class="chip cond">Request type <strong>is Refund</strong></span></span>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <span class="label">Email</span><span><span class="chip">billing@yourcompany.com</span></span>
+    </div>
+    <ul class="extra">
+      <li><b>Subject:</b> Refund request for <i>Order number</i></li>
+      <li><b>Message:</b> <i>Name</i>, <i>Order number</i> and <i>Message</i>, added with Insert answer</li>
+    </ul>
+    <p class="tip">You don't need to collect respondent emails, because the email goes to your own inbox. Formbell only sends the email. You still approve and process the refund yourself.</p>
+  </section>
 
-  <h2 id="event-confirmation">2. Event registration confirmation</h2>
-  <p>Email each person who says they will attend, with the session they chose.</p>
-  <h3>Questions</h3>
-  <table>
-    <thead><tr><th>Question</th><th>Type</th><th>Used for</th></tr></thead>
-    <tbody>
-      <tr><td>Attendance</td><td>Multiple choice, required: Yes / No</td><td>The condition</td></tr>
-      <tr><td>Name</td><td>Short answer, required</td><td>Greeting</td></tr>
-      <tr><td>Session</td><td>Multiple choice or dropdown, required</td><td>Subject and message</td></tr>
-      <tr><td>Email (if not using collected email)</td><td>Short answer, required, with email validation</td><td>The recipient</td></tr>
-    </tbody>
-  </table>
-  <h3>Rule</h3>
-  <ul>
-    <li><strong>When:</strong> Attendance is Yes</li>
-    <li><strong>Send to:</strong> The person who filled in the form. Choose <strong>Email collected by Google Forms</strong> if your form collects emails. If email collection is off or can't be checked, choose your Email question instead.</li>
-    <li><strong>Subject:</strong> "Your registration for" + the Session answer</li>
-    <li><strong>Message:</strong> greet them by Name and confirm that you received their registration for the Session</li>
-  </ul>
-  <p class="note">Say that you received the registration. Do not say that a seat or payment is confirmed, because the form cannot check that.</p>
+  <section class="recipe" id="event-confirmation">
+    <h2>Confirm event registrations</h2>
+    <p class="what">When someone says yes, they get an email that names the session they picked.</p>
+    <h3>Form questions</h3>
+    <ul class="fields">
+      <li><span class="name">Attendance</span><span class="type">Multiple choice, required · Yes / No</span></li>
+      <li><span class="name">Name</span><span class="type">Short answer, required</span></li>
+      <li><span class="name">Session</span><span class="type">Multiple choice or dropdown, required</span></li>
+      <li><span class="name">Email</span><span class="type">Short answer with email validation · only if you don't use collected email</span></li>
+    </ul>
+    <h3>Formbell rule</h3>
+    <div class="rule">
+      <span class="label">When</span><span><span class="chip cond">Attendance <strong>is Yes</strong></span></span>
+      <span class="arrow" aria-hidden="true">↓</span>
+      <span class="label">Email</span><span><span class="chip">The person who filled in the form</span></span>
+    </div>
+    <ul class="extra">
+      <li><b>Subject:</b> Your registration for <i>Session</i></li>
+      <li><b>Message:</b> greet them by <i>Name</i> and confirm you received their registration</li>
+    </ul>
+    <p class="tip">If your form collects emails, pick <b>Email collected by Google Forms</b>. If email collection is off or can't be checked, pick your Email question. Say you received the registration, not that a seat or payment is confirmed.</p>
+  </section>
 
-  <h2 id="inquiry-routing">3. Inquiry routing by type</h2>
-  <p>Send each kind of inquiry to the person who handles it.</p>
-  <h3>Questions</h3>
-  <table>
-    <thead><tr><th>Question</th><th>Type</th><th>Used for</th></tr></thead>
-    <tbody>
-      <tr><td>Request type</td><td>Multiple choice or dropdown, required: Sales / Support / Billing</td><td>The condition</td></tr>
-      <tr><td>Name</td><td>Short answer</td><td>Message</td></tr>
-      <tr><td>Message</td><td>Paragraph, required</td><td>The inquiry</td></tr>
-    </tbody>
-  </table>
-  <h3>Rules</h3>
-  <table>
-    <thead><tr><th>When</th><th>Send to</th></tr></thead>
-    <tbody>
-      <tr><td>Request type is Sales</td><td>Your sales inbox</td></tr>
-      <tr><td>Request type is Support</td><td>Your support inbox</td></tr>
-      <tr><td>Request type is Billing</td><td>Your billing inbox</td></tr>
-    </tbody>
-  </table>
-  <p class="note">Each route is one rule. On the free plan, one of these rules runs at a time. Running all three together needs Pro: $4 per month or $29 per year, taxes included. Use a single-choice question so each response matches one route. With checkbox conditions such as contains or is any of, one response can match several rules and send several emails.</p>
+  <section class="recipe" id="inquiry-routing">
+    <h2>Send each inquiry to the right person</h2>
+    <p class="what">Your sales team gets sales questions, and your support team gets support questions.</p>
+    <h3>Form questions</h3>
+    <ul class="fields">
+      <li><span class="name">Request type</span><span class="type">Multiple choice, required · Sales / Support / Billing</span></li>
+      <li><span class="name">Name</span><span class="type">Short answer</span></li>
+      <li><span class="name">Message</span><span class="type">Paragraph, required</span></li>
+    </ul>
+    <h3>Formbell rules · one per route</h3>
+    <div class="routes">
+      <div class="route"><span class="chip cond">Request type <strong>is Sales</strong></span><span class="to">→</span><span class="chip">sales@yourcompany.com</span></div>
+      <div class="route"><span class="chip cond">Request type <strong>is Support</strong></span><span class="to">→</span><span class="chip">support@yourcompany.com</span></div>
+      <div class="route"><span class="chip cond">Request type <strong>is Billing</strong></span><span class="to">→</span><span class="chip">billing@yourcompany.com</span></div>
+    </div>
+    <p class="tip">On Free, you can run one route at a time. To run all three, you need Pro: $4/month or $29/year, taxes included. Keep Request type as a single-choice question. If you use checkboxes with contains or is any of, one response can match several rules, and Formbell sends one email per matching rule.</p>
+  </section>
 
-  <h2>Preview and send a test</h2>
-  <ol>
-    <li>Submit a test response that matches the rule, using your own address where an email is needed.</li>
-    <li>In the rule editor, preview the email with that response, then save the rule.</li>
-    <li>On Free, if another rule is running in your account, choose which rule runs.</li>
-    <li>Turn alerts on for the form, then use <strong>Send me a test</strong>. The test goes only to your own address.</li>
-    <li>After a real response arrives, check the <a href="conditional-email-notifications.html">send log</a>. Sent means Google accepted the email for sending. It does not confirm inbox delivery.</li>
+  <h2 style="margin-top:44px">Try it before real responses arrive</h2>
+  <ol class="steps">
+    <li>Submit a response that matches the rule. Use your own address wherever an email is needed.</li>
+    <li>Open the rule, preview the email with that response, and save.</li>
+    <li>On Free, if another rule is already running, choose which one runs.</li>
+    <li>Turn alerts on, then click <b>Send me a test</b>. Formbell sends the test only to you.</li>
+    <li>When real responses come in, check the <a href="conditional-email-notifications.html">send log</a>. Sent means Google accepted the email for sending. It doesn't tell you whether the email reached the inbox.</li>
   </ol>
-
-  <h2>Limits</h2>
-  <ul>
-    <li>One condition per rule. No AND/OR combinations.</li>
-    <li>Each rule sends to one address. No CC or BCC.</li>
-    <li>Google's daily sending limits apply.</li>
-  </ul>
+  <p class="muted">Limits: one condition per rule, one address per rule (no CC or BCC), and Google's daily sending limits. These recipes don't come with ready-made Formbell rules, so you create the rule in your own form.</p>
 
   <p><a class="install" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install from Google Workspace Marketplace</a></p>
-  <p class="note">More detail: <a href="conditional-email-notifications.html">route notifications by answer</a> and <a href="personalized-confirmation-email.html">send a personalized confirmation email</a>.</p>
+  <p class="muted">Step by step: <a href="conditional-email-notifications.html">route notifications by answer</a> · <a href="personalized-confirmation-email.html">send a personalized confirmation</a></p>
 
   <footer>
     Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a><br>
