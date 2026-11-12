@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Direction B · Product doc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#161618; --soft:#5b5e66; --line:#e6e6e3; --bg:#ffffff; --tint:#f6f5f1; --marigold:#ffb300; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:16px; line-height:1.55; }
+  .bar { border-bottom:1px solid var(--line); }
+  .bar .in { max-width:1080px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:24px; font-size:14px; }
+  .mark { display:flex; align-items:center; gap:8px; font-weight:600; color:var(--ink); text-decoration:none; }
+  .mark img { width:22px; height:22px; }
+  .crumb { color:var(--soft); }
+  .crumb a { color:var(--soft); text-decoration:none; }
+  .bar .install { margin-left:auto; font-weight:500; color:var(--ink); }
+  .head { max-width:1080px; margin:0 auto; padding:64px 32px 40px; display:grid; grid-template-columns:minmax(0,640px); }
+  h1 { font-size:40px; line-height:1.12; letter-spacing:-.02em; font-weight:600; margin:0 0 16px; }
+  .lede { font-size:19px; color:var(--soft); margin:0; }
+  .plan { margin-top:20px; font-size:14px; color:var(--soft); display:flex; gap:10px; align-items:baseline; }
+  .plan b { color:var(--ink); font-weight:600; }
+  .recipe { max-width:1080px; margin:0 auto; padding:48px 32px; border-top:1px solid var(--line); display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:56px; align-items:start; }
+  .idx { font-family:"IBM Plex Mono", monospace; font-size:13px; color:var(--soft); margin:0 0 10px; }
+  .idx b { color:var(--ink); font-weight:500; }
+  h2 { font-size:26px; line-height:1.2; letter-spacing:-.01em; font-weight:600; margin:0 0 10px; }
+  .what { font-size:17px; margin:0 0 28px; }
+  dl { margin:0; display:grid; grid-template-columns:96px minmax(0,1fr); row-gap:18px; column-gap:16px; }
+  dt { font-size:13px; font-weight:500; color:var(--soft); padding-top:2px; }
+  dd { margin:0; }
+  code { font-family:"IBM Plex Mono", monospace; font-size:14px; background:var(--tint); padding:2px 6px; border-radius:4px; white-space:nowrap; }
+  .cond { box-shadow:inset 0 -2px 0 var(--marigold); background:#fff8e1; }
+  .note { margin-top:24px; font-size:14px; color:var(--soft); }
+  figure { margin:0; position:sticky; top:24px; }
+  figure img { display:block; width:100%; height:auto; border-radius:8px; border:1px solid var(--line); }
+  figcaption { font-size:12px; color:var(--soft); margin-top:8px; }
+  .foot { max-width:1080px; margin:0 auto; padding:40px 32px 64px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:16px; align-items:center; font-size:14px; color:var(--soft); }
+  .foot a.btn { background:var(--ink); color:#fff; text-decoration:none; padding:11px 18px; border-radius:6px; font-weight:500; }
+  a { color:var(--ink); }
+  @media (max-width:820px) { .recipe { grid-template-columns:1fr; gap:28px; } figure { position:static; max-width:300px; } h1 { font-size:32px; } dl { grid-template-columns:1fr; row-gap:4px; } dd { margin-bottom:12px; } }
+</style>
+</head>
+<body>
+<div class="bar"><div class="in">
+  <a class="mark" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="">Formbell</a>
+  <span class="crumb"><a href="../help/conditional-email-notifications.html">Guides</a> / Recipes</span>
+  <a class="install" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a>
+</div></div>
+
+<div class="head">
+  <h1>Three Google Forms™ recipes that email someone only when an answer matches</h1>
+  <p class="lede">A few questions and one Formbell rule each.</p>
+  <p class="plan"><b>Free</b> 1 rule at a time across your Google account · <b>Pro</b> several routes at once, $4/mo or $29/yr</p>
+</div>
+
+<section class="recipe">
+  <div>
+    <p class="idx"><b>01</b> / refund router</p>
+    <h2>Refund requests go to billing</h2>
+    <p class="what">Your billing inbox gets refund requests, and nothing else.</p>
+    <dl>
+      <dt>Questions</dt><dd>Request type (multiple choice: Refund, Sales, Support), Order number, Name, Message</dd>
+      <dt>Rule</dt><dd><code class="cond">Request type is Refund</code> → <code>billing@acme.com</code></dd>
+      <dt>Email</dt><dd>Order number in the subject. Name, order number and message in the body.</dd>
+    </dl>
+    <p class="note">Formbell only sends the email. You still approve and process the refund yourself.</p>
+  </div>
+  <figure>
+    <img src="https://raw.githubusercontent.com/lazypl82/lazypl82.github.io/4640f992e317d70d4673feaf348697013188d155/formbell/help/assets/screenshots/recipe-refund@2x.png" alt="Formbell rule card for refund requests">
+    <figcaption>The rule in the Formbell sidebar</figcaption>
+  </figure>
+</section>
+
+<section class="recipe">
+  <div>
+    <p class="idx"><b>02</b> / event confirmation</p>
+    <h2>Confirm event registrations</h2>
+    <p class="what">When someone says yes, they get an email that names the session they picked.</p>
+    <dl>
+      <dt>Questions</dt><dd>Attendance (Yes, No), Name, Session. Add an Email question only if your form doesn't collect emails.</dd>
+      <dt>Rule</dt><dd><code class="cond">Attendance is Yes</code> → <code>the person who filled in the form</code></dd>
+      <dt>Email</dt><dd>Greet them by name and confirm you received their registration.</dd>
+    </dl>
+    <p class="note">Don't promise a seat or a payment the form can't check.</p>
+  </div>
+  <figure>
+    <img src="https://raw.githubusercontent.com/lazypl82/lazypl82.github.io/4640f992e317d70d4673feaf348697013188d155/formbell/help/assets/screenshots/recipe-event@2x.png" alt="Rule editor sending to the respondent">
+    <figcaption>Sending to the respondent's collected email</figcaption>
+  </figure>
+</section>
+
+<section class="recipe">
+  <div>
+    <p class="idx"><b>03</b> / inquiry routing</p>
+    <h2>Send each inquiry to the right person</h2>
+    <p class="what">Sales questions to sales, support questions to support.</p>
+    <dl>
+      <dt>Questions</dt><dd>Request type (multiple choice: Sales, Support, Billing), Name, Message</dd>
+      <dt>Rules</dt><dd><code class="cond">is Sales</code> → <code>sales@acme.com</code><br><code class="cond">is Support</code> → <code>support@acme.com</code><br><code class="cond">is Billing</code> → <code>billing@acme.com</code></dd>
+    </dl>
+    <p class="note">Free runs one route at a time. All three together needs Pro.</p>
+  </div>
+  <figure>
+    <img src="https://raw.githubusercontent.com/lazypl82/lazypl82.github.io/4640f992e317d70d4673feaf348697013188d155/formbell/help/assets/screenshots/recipe-routing@2x.png" alt="Three rule cards">
+    <figcaption>One rule per route</figcaption>
+  </figure>
+</section>
+
+<div class="foot"><a class="btn" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install Formbell</a><span>Free plan included · Made by Lazy Labs</span></div>
+</body>
+</html>

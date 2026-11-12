@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Direction A · Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1b1b1d; --soft:#4a4d55; --rule:#e4e1d9; --paper:#fbfaf7; --marigold:#ffb300; }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Newsreader", Georgia, serif; font-size:20px; line-height:1.6; font-optical-sizing:auto; }
+  .top { max-width:1100px; margin:0 auto; padding:22px 32px; display:flex; align-items:center; justify-content:space-between; font-family:Inter, system-ui, sans-serif; font-size:14px; }
+  .top a { color:var(--ink); text-decoration:none; }
+  .mark { display:flex; align-items:center; gap:10px; font-weight:600; letter-spacing:-.01em; }
+  .mark img { width:26px; height:26px; }
+  .top nav { display:flex; gap:22px; color:var(--soft); }
+  .top nav a { color:var(--soft); }
+  article { max-width:640px; margin:0 auto; padding:56px 24px 96px; }
+  .kicker { font-family:Inter, system-ui, sans-serif; font-size:13px; font-weight:600; color:var(--soft); margin:0 0 18px; }
+  h1 { font-weight:500; font-size:46px; line-height:1.08; letter-spacing:-.015em; margin:0 0 24px; }
+  .dek { font-size:22px; line-height:1.5; color:var(--soft); margin:0 0 12px; }
+  p { margin:0 0 18px; }
+  section { margin-top:72px; padding-top:28px; border-top:1px solid var(--rule); position:relative; }
+  .num { font-family:Inter, system-ui, sans-serif; font-weight:600; font-size:14px; color:var(--ink); display:inline-flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .num::before { content:""; width:18px; height:3px; background:var(--marigold); border-radius:2px; }
+  h2 { font-weight:500; font-size:31px; line-height:1.18; letter-spacing:-.01em; margin:0 0 14px; }
+  .q { font-style:italic; }
+  figure { margin:34px 0 30px; }
+  figure img { display:block; max-width:100%; height:auto; border-radius:10px; box-shadow:0 1px 0 rgba(0,0,0,.04), 0 10px 30px -12px rgba(27,27,29,.18); }
+  figcaption { font-family:Inter, system-ui, sans-serif; font-size:13px; color:var(--soft); margin-top:12px; }
+  .aside { font-size:18px; color:var(--soft); }
+  ol { padding-left:1.1em; margin:0 0 18px; }
+  li { margin:0 0 10px; padding-left:.2em; }
+  .cta { margin-top:56px; display:flex; flex-wrap:wrap; align-items:center; gap:18px; font-family:Inter, system-ui, sans-serif; font-size:15px; }
+  .cta a.btn { background:var(--ink); color:#fff; text-decoration:none; padding:13px 20px; border-radius:999px; font-weight:600; }
+  .cta span { color:var(--soft); }
+  a { color:var(--ink); text-decoration-thickness:1px; text-underline-offset:3px; }
+  footer { max-width:640px; margin:0 auto; padding:28px 24px 56px; border-top:1px solid var(--rule); font-family:Inter, system-ui, sans-serif; font-size:13px; color:var(--soft); }
+  @media (max-width:640px) { body { font-size:18px; } h1 { font-size:36px; } h2 { font-size:26px; } .top nav { display:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="">Formbell</a>
+  <nav><a href="../help/conditional-email-notifications.html">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a></nav>
+</header>
+<article>
+  <p class="kicker">Recipes</p>
+  <h1>Three Google Forms™ that email the right person, and only them</h1>
+  <p class="dek">Each one is a handful of questions and a single Formbell rule. Formbell sends the email automatically, but only when an answer matches.</p>
+  <p class="aside">On the free plan you can run one rule at a time across your Google account. Running several routes at once needs Pro.</p>
+
+  <section>
+    <div class="num">Recipe 1</div>
+    <h2>Refund requests go to billing</h2>
+    <p>Your billing inbox gets refund requests, and nothing else.</p>
+    <p>Add a required multiple-choice question, <span class="q">Request type</span>, with Refund, Sales and Support. Then add <span class="q">Order number</span>, <span class="q">Name</span> and <span class="q">Message</span>. In Formbell, create a rule for when Request type is Refund and send it to your billing address.</p>
+    <figure>
+      <img src="https://raw.githubusercontent.com/lazypl82/lazypl82.github.io/4640f992e317d70d4673feaf348697013188d155/formbell/help/assets/screenshots/recipe-refund@2x.png" width="270" alt="Formbell rule card: when Request type is Refund, email billing">
+      <figcaption>The finished rule in the Formbell sidebar</figcaption>
+    </figure>
+    <p class="aside">Formbell only sends the email. You still approve and process the refund yourself.</p>
+  </section>
+
+  <section>
+    <div class="num">Recipe 2</div>
+    <h2>Confirm event registrations</h2>
+    <p>When someone says yes, they get an email that names the session they picked.</p>
+    <p>Add <span class="q">Attendance</span> (Yes or No), <span class="q">Name</span> and <span class="q">Session</span>. Create a rule for when Attendance is Yes, and send it to the person who filled in the form, using the email Google Forms collects.</p>
+    <figure>
+      <img src="https://raw.githubusercontent.com/lazypl82/lazypl82.github.io/4640f992e317d70d4673feaf348697013188d155/formbell/help/assets/screenshots/recipe-event@2x.png" width="389" alt="Rule editor sending to the person who filled in the form">
+      <figcaption>Choosing the respondent's address in the rule editor</figcaption>
+    </figure>
+    <p class="aside">Say you received the registration. Don't promise a seat or a payment the form can't check.</p>
+  </section>
+
+  <section>
+    <div class="num">Recipe 3</div>
+    <h2>Send each inquiry to the right person</h2>
+    <p>Your sales team gets sales questions, and your support team gets support questions. Make one rule per route, each with its own address.</p>
+    <p class="aside">On Free you can run one route at a time. All three together needs Pro, $4 a month or $29 a year, taxes included.</p>
+  </section>
+
+  <div class="cta"><a class="btn" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install Formbell</a><span>Free plan included</span></div>
+</article>
+<footer>Formbell is made by Lazy Labs. Google Forms is a trademark of Google LLC.</footer>
+</body>
+</html>
