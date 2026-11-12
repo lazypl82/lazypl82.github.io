@@ -2,9 +2,9 @@
   "synthetic": true,
   "purpose": "Help illustrations rendered in remote GitHub Actions Linux from unchanged v4 product HTML/CSS. Not Google-host, entitlement, sending or delivery evidence.",
   "productSource": "012b78c3342a493aa4aa1712cd5f98b17cc0ae97",
-  "siteBase": "0edf8eeee7a3d1ba3b482f9c78c565dfb0ad4d1e",
-  "renderCommit": "3b4ebe820af20c593078c12640685c59d2b523ec",
-  "capturedAt": "2026-11-12T03:18:06.557Z",
+  "siteBase": "6988a7b91ac0334ef5f0a4db4d174bdf288345c3",
+  "renderCommit": "4a36039145e9decf954758c23c43463d5ee2ab87",
+  "capturedAt": "2026-11-12T03:30:09.203Z",
   "exampleClockUtc": "2026-11-02T10:45:00.000Z",
   "timezone": "UTC",
   "deviceScaleFactor": 2,
@@ -16,7 +16,8 @@
     "scripts/help-product-fixture.mjs": "8751bd81e83d7f9f77714a061ef7422771a093644da845db5d11201d92d374e8",
     "scripts/listing-product-fixture.mjs": "dd2aa5c1aa574167866208d65c5983c389e12a47fa16f3d24d13cb60ace282a8"
   },
-  "rendererSha256": "a6cd81763a71debe348af03abbe3550da4d1ead0fab5126bdbcfb3a4df553d81",
+  "rendererCommit": "2ebbda8963179029d8e89195ef00f546ffb4c8d1",
+  "rendererSha256": "ca529367a3e1388caae08f93f135bd83e715ec5cbcffa3bb96226202322d45d2",
   "compiledHtmlSha256": "e53bbdce6468d95b9ce78e3cb9630c5b329317c7dd2f2943509f5e1342a2c650",
   "hostStylesheet": {
     "url": "https://ssl.gstatic.com/docs/script/css/add-ons1.css",
@@ -40,7 +41,8 @@
   "liveVerifiedOnDisk": true,
   "fixtureAdaptations": [
     "Add v4 emailCollection.enabled=true for the same collected-email sample form",
-    "Set the displayed example version to productSource; synthetic rule/response scenes retained"
+    "Set the displayed example version to productSource; synthetic rule/response scenes retained",
+    "Self-test preview address is synthetic you@example.test"
   ],
   "injections": [
     "FORMBELL_UI_CONTEXT",
@@ -79,6 +81,90 @@
           "{{Message}}"
         ],
         "previewBody": "Alex Morgan requests a refund for ORD-1042.Please refund my duplicate order.",
+        "sendLogGeometry": null,
+        "editorScroll": {
+          "top": 0,
+          "height": 522,
+          "total": 627,
+          "controls": [
+            {
+              "tag": "INPUT",
+              "id": "field-ffapvx5yxz",
+              "top": 74,
+              "bottom": 106
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-kxeoieiml38",
+              "top": 151,
+              "bottom": 183
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-8lyvng67ob8",
+              "top": 151,
+              "bottom": 183
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-gwj5j0dii9l-choices",
+              "top": 151,
+              "bottom": 183
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-hboh0p41b8j",
+              "top": 264,
+              "bottom": 296
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 270,
+              "bottom": 302
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 268,
+              "bottom": 300
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 318,
+              "bottom": 350
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            }
+          ],
+          "bounds": {
+            "x": 0,
+            "y": 34,
+            "width": 436.59375,
+            "height": 522,
+            "top": 34,
+            "right": 436.59375,
+            "bottom": 556,
+            "left": 0
+          }
+        },
         "testPreview": null
       }
     },
@@ -88,13 +174,13 @@
       "screen": "send-log",
       "mode": "sidebar",
       "width": 270,
-      "height": 1260,
+      "height": 800,
       "pngWidth": 540,
-      "pngHeight": 2520,
-      "sha256": "b2d0622c1961a1f5cd314f27212f64872640ea39777d67425bc5ab26f8979e54",
+      "pngHeight": 1600,
+      "sha256": "60b6a5da327be8d7842f73b218a27bf162a421dd5b51384885f11c42d26b78ff",
       "audit": {
         "width": 270,
-        "height": 1260,
+        "height": 800,
         "deviceScaleFactor": 2,
         "scrollWidth": 270,
         "text": "Send log\nRefresh\nSent\n10:42 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nFailed\n10:38 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nYour Google account reached its daily sending limit. Resend after the limit resets.\n\nReview and resend\nUnknown\n10:34 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nResending could send a duplicate.\n\nReview and resend\n\nSent means Google accepted it for sending. Inbox delivery isn't confirmed.\n\nDetails\nRules\nSend log\nPlan\nHelp",
@@ -104,6 +190,29 @@
         ],
         "chips": [],
         "previewBody": null,
+        "sendLogGeometry": {
+          "details": {
+            "x": 16,
+            "y": 694,
+            "width": 238,
+            "height": 40,
+            "top": 694,
+            "right": 254,
+            "bottom": 734,
+            "left": 16
+          },
+          "footer": {
+            "x": 0,
+            "y": 753,
+            "width": 270,
+            "height": 47,
+            "top": 753,
+            "right": 270,
+            "bottom": 800,
+            "left": 0
+          }
+        },
+        "editorScroll": null,
         "testPreview": null
       }
     },
@@ -134,6 +243,90 @@
           "{{Session}}"
         ],
         "previewBody": "Hi Sam,We received your registration for Friday workshop.",
+        "sendLogGeometry": null,
+        "editorScroll": {
+          "top": 0,
+          "height": 522,
+          "total": 691,
+          "controls": [
+            {
+              "tag": "INPUT",
+              "id": "field-z7ex9lcla4j",
+              "top": 74,
+              "bottom": 106
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-pqc8soy2cp",
+              "top": 151,
+              "bottom": 183
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-zp0sxfvaezb",
+              "top": 151,
+              "bottom": 183
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-lsm4du2i6os-choices",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-h1h0ab79raa",
+              "top": 264,
+              "bottom": 296
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 270,
+              "bottom": 302
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 318,
+              "bottom": 350
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 356,
+              "bottom": 388
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            }
+          ],
+          "bounds": {
+            "x": 0,
+            "y": 34,
+            "width": 436.59375,
+            "height": 522,
+            "top": 34,
+            "right": 436.59375,
+            "bottom": 556,
+            "left": 0
+          }
+        },
         "testPreview": null
       }
     },
@@ -148,7 +341,7 @@
       "height": 620,
       "pngWidth": 1520,
       "pngHeight": 1240,
-      "sha256": "61dd884829bef8e2801112da2433e0308ff9141097d64477ab0af86d1d97a96b",
+      "sha256": "bc89ecf78016c16271975900b3cee7eb8709b76073cdb485820c13ee17abf938",
       "audit": {
         "width": 760,
         "height": 620,
@@ -165,6 +358,90 @@
           "{{Session}}"
         ],
         "previewBody": "Hi Sam,We received your registration for Friday workshop.",
+        "sendLogGeometry": null,
+        "editorScroll": {
+          "top": 137,
+          "height": 522,
+          "total": 691,
+          "controls": [
+            {
+              "tag": "INPUT",
+              "id": "field-xojvyctzmy",
+              "top": -63,
+              "bottom": -31
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-4475zw1f65o",
+              "top": 14,
+              "bottom": 46
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-c75jolma4u",
+              "top": 14,
+              "bottom": 46
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-4kuxo0af8fc-choices",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "SELECT",
+              "id": "field-9g2jddqotr",
+              "top": 127,
+              "bottom": 159
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 133,
+              "bottom": 165
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            },
+            {
+              "tag": "INPUT",
+              "id": "",
+              "top": 181,
+              "bottom": 213
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 219,
+              "bottom": 251
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "top": 0,
+              "bottom": 0
+            }
+          ],
+          "bounds": {
+            "x": 0,
+            "y": 34,
+            "width": 436.59375,
+            "height": 522,
+            "top": 34,
+            "right": 436.59375,
+            "bottom": 556,
+            "left": 0
+          }
+        },
         "testPreview": null
       }
     },
@@ -179,13 +456,13 @@
       "height": 1100,
       "pngWidth": 540,
       "pngHeight": 2200,
-      "sha256": "977f2d99e5267a6e3d215e612f20add96ced8c833b0c3adf6eb58e166d82280f",
+      "sha256": "8f3a152e414c1f108cbe316499ebc2645611983cef2d6ed8c66566b8e2e7546e",
       "audit": {
         "width": 270,
         "height": 1100,
         "deviceScaleFactor": 2,
         "scrollWidth": 270,
-        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
+        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: you@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
         "developmentBanner": false,
         "requests": [
           "state",
@@ -193,11 +470,13 @@
         ],
         "chips": [],
         "previewBody": null,
+        "sendLogGeometry": null,
+        "editorScroll": null,
         "testPreview": {
           "title": "Preview before sending",
           "selectedResponse": "",
           "responseChoices": 3,
-          "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
+          "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: you@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
           "body": "Hi Sam,We received your registration for Friday workshop."
         }
       }
@@ -214,13 +493,13 @@
       "height": 1100,
       "pngWidth": 540,
       "pngHeight": 2200,
-      "sha256": "2dc7593b9c48cc4a9004607b3638ff1b5afd10913885852ffc2905449673bcc9",
+      "sha256": "c4d7f5a6782bcededd40d12e2b886e8ec9462d8b9f90c26c398907e6a8ea6afa",
       "audit": {
         "width": 270,
         "height": 1100,
         "deviceScaleFactor": 2,
         "scrollWidth": 270,
-        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
+        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: you@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
         "developmentBanner": false,
         "requests": [
           "state",
@@ -229,11 +508,13 @@
         ],
         "chips": [],
         "previewBody": null,
+        "sendLogGeometry": null,
+        "editorScroll": null,
         "testPreview": {
           "title": "Preview before sending",
           "selectedResponse": "synthetic-confirmation-01",
           "responseChoices": 3,
-          "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
+          "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: you@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
           "body": "Hi Alex,We received your registration for Monday workshop."
         }
       }
@@ -294,18 +575,17 @@
   ],
   "remoteMutations": 0,
   "ci": {
-    "repository": "lazypl82/formbell",
-    "run": 43147251014,
-    "url": "https://github.com/lazypl82/formbell/actions/runs/43147251014",
-    "workflowCommit": "bd31de38ed5bc632b57e2b4b19e691c4bd275911",
-    "artifact": 13911593042,
-    "uploadedZipSha256": "9d0546b3b50a8f63e6137de2bb5870f833c95c76690449ec9557454e33a24c59"
+    "runId": 43148594366,
+    "url": "https://github.com/lazypl82/formbell/actions/runs/43148594366",
+    "artifactId": 13912568135,
+    "artifactName": "formbell-help-v4-2ebbda8963179029d8e89195ef00f546ffb4c8d1",
+    "artifactDigest": "sha256:2b806ce94fa2a7e827493ba61efd212c3a25d2951fb7a174469f6d0fed8a2085",
+    "conclusion": "success"
   },
   "preservedGoogleFormsImage": {
     "filename": "forms-settings-email-receipts.png",
     "sha256": "3da7d9f46becbf8fef7cdd5c4bc406478be21c0803d46ab45c683ea7730b67b9",
-    "changed": false,
-    "reverified": false,
-    "status": "U"
+    "unchangedFromSiteBase": true,
+    "currentGoogleHostValidation": "U"
   }
 }
