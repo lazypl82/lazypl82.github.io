@@ -83,6 +83,7 @@ blockquote p:last-child { margin-bottom:0; }
 footer { max-width:640px; margin:0 auto; padding:32px 24px 64px; border-top:1px solid var(--rule); font:400 13px/24px var(--sans); color:var(--soft); }
 footer a { color:var(--soft); }
 
+/* Phones: a 4px rhythm (18/28 body, 20/28 lead) keeps line length readable. Intended exception to the 8px desktop rhythm. */
 @media (max-width:640px) {
   body { font-size:18px; line-height:28px; }
   .top { padding:16px 20px; }
@@ -101,8 +102,6 @@ footer a { color:var(--soft); }
 /* Images inside guide paragraphs (whole product screens) */
 main p > img { display:block; max-width:100%; height:auto; border-radius:8px; margin:32px 0 0; box-shadow:0 1px 0 rgba(0,0,0,.05), 0 16px 40px -24px rgba(27,27,29,.35); }
 main p > img.sidebar-example { width:min(100%, 270px); }
-.preview-frame { width:min(100%, 270px); aspect-ratio:270 / 850; overflow:hidden; border-radius:8px; margin:32px 0 0; box-shadow:0 1px 0 rgba(0,0,0,.05), 0 16px 40px -24px rgba(27,27,29,.35); }
-.preview-frame img { width:100%; height:100%; object-fit:cover; object-position:top; margin:0; box-shadow:none; border-radius:0; }
 main p:has(> em:only-child) { font:400 14px/24px var(--sans); color:var(--soft); margin-top:16px; margin-bottom:32px; }
 main p:has(> em:only-child) em { font-style:normal; }
 .muted { color:var(--soft); }

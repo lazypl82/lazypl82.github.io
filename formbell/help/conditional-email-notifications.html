@@ -14,97 +14,64 @@
   <nav><a href="conditional-email-notifications.html" aria-current="page">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a></nav>
 </header>
 <main>
+<p class="kicker">Guide</p>
 <h1>Send Google Forms email notifications based on answers</h1>
-<p>When a form collects different kinds of inquiries, the same person may not need every response. Formbell can send a notification to a fixed email address only when an answer matches your rule.</p>
-<p>This walkthrough sends a sales inquiry to the person who handles sales. Start with a copy of your form or a small test form so the example does not email a real customer or teammate while you are learning.</p>
+<p class="dek">If your form collects different kinds of inquiries, not everyone needs every response. Here you'll set up one rule so that sales inquiries go to the person who handles sales.</p>
+<p>Try it on a copy of your form or a small test form first, so you don't email a real customer or teammate while you learn.</p>
+
 <h2>Before you start</h2>
-<ul>
-<li>You need editing access to the Google Form and permission to install Formbell. Your Workspace administrator may control add-on access.</li>
-<li>Free lets one selected rule run at a time across your Google account. Every condition type is included. Pro is only needed when you want more rules across that account's forms, within Google's limits.</li>
-<li>For this example, include a required multiple-choice question named <strong>Inquiry type</strong>, with choices <strong>Sales</strong> and <strong>Support</strong>. Add <strong>Name</strong> and <strong>Message</strong> questions if you want their answers in the email.</li>
-<li>Submit one sample response with <strong>Sales</strong> and test details you control, such as the name <strong>Sam</strong> and the message <strong>I would like a quote</strong>. Do this before enabling alerts so the sample can be used for previewing.</li>
+<p>You need edit access to the form and permission to install Formbell. If you use Google Workspace at work or school, your administrator may decide which add-ons you can install.</p>
+<p>On the free plan you can run one rule at a time across your Google account, with every condition type. You only need Pro if you want more rules running at once.</p>
+<p>For this example, add a required multiple-choice question called <b>Inquiry type</b> with the choices Sales and Support. Add <b>Name</b> and <b>Message</b> questions if you want their answers in the email. Then submit one sample response yourself: choose Sales, use the name Sam and the message "I would like a quote". You'll use it to preview the email.</p>
+<p class="soft">If you only want an email every time someone responds, Google Forms can already do that under Responses → More → Get email notifications for new responses. See <a href="https://support.google.com/docs/answer/139706?hl=en">Google's help page</a>. Formbell is for when the email should depend on the answer, or include it.</p>
+
+<h2>1. Create the rule</h2>
+<p>Open Formbell from your form's add-on menu. The first time, you may see Connect this form; choose Start in this form. Then choose Create a rule. If this form already has one of your rules, choose Edit on it instead.</p>
+<ul class="ruled">
+  <li><span class="k">Rule name</span><span class="v">Sales inquiry alert</span></li>
+  <li><span class="k">When</span><span class="v">Inquiry type is Sales</span></li>
+  <li><span class="k">Send to</span><span class="v">This address: your own email while you test</span></li>
+  <li><span class="k">Rule active</span><span class="v">checked</span></li>
 </ul>
-<p>If all you need is Google's basic notice that a response arrived, Google Forms already provides that under <strong>Responses → More → Get email notifications for new responses</strong>. Use Formbell when you need answer-based routing or a personalized message. See <a href="https://support.google.com/docs/answer/139706?hl=en">Google's response-management help</a>.</p>
-<h2>1. Create the routing rule</h2>
-<p>Open Formbell from your form's add-on menu. On a first visit, choose <strong>Start in this form</strong> if <strong>Connect this form</strong> is shown. Choose <strong>Create a rule</strong> on home to open the rule-editor dialog. If this form already has one of your rules on Free, choose <strong>Edit</strong> on that rule instead. A form with none of your rules can create one even if a different form already uses your Free slot.</p>
-<p>Use these settings:</p>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Rule name</td>
-<td>Sales inquiry alert</td>
-</tr>
-<tr>
-<td>Rule active</td>
-<td>Checked</td>
-</tr>
-<tr>
-<td>When</td>
-<td>Inquiry type</td>
-</tr>
-<tr>
-<td>Condition</td>
-<td>is</td>
-</tr>
-<tr>
-<td>Comparison value</td>
-<td>Select Sales from the question's choices</td>
-</tr>
-<tr>
-<td>Send to</td>
-<td>This address</td>
-</tr>
-<tr>
-<td>Recipient address</td>
-<td>Your own email address while testing</td>
-</tr>
-</tbody>
-</table>
-<p>For this multiple-choice question, select <strong>Sales</strong> from the comparison-value list. The values come from the question's current choices. For a text question, enter the comparison value exactly; text matching is case-sensitive, and spaces matter. You do not need a second rule just to ignore Support responses.</p>
-<p><img alt="Example rule editor showing a refund condition, a fixed recipient, and an email preview" src="assets/screenshots/891daf2-rule-editor.png" /></p>
-<p><em>Example product render using a refund rule and sample data; the guide uses a Sales rule.</em></p>
+<p>For a multiple-choice question, you pick the value from the question's own choices. For a text question you type the value, and it has to match exactly, including capital letters and spaces. You don't need a second rule to ignore Support responses.</p>
+<p><img alt="The Formbell rule editor with a condition, a fixed recipient and an email preview" src="assets/screenshots/891daf2-rule-editor.png" width="760" height="620"></p>
+<p><em>The rule editor. This example uses a refund rule; the steps are the same for sales.</em></p>
+
 <h2>2. Write the email</h2>
-<p>Set <strong>Subject</strong> to a simple title such as <strong>New sales inquiry</strong>.</p>
-<p>In <strong>Message</strong>, type the message your teammate needs. New rules use <strong>Plain text</strong>, with paragraphs and line breaks. For example, the final preview could read:</p>
+<p>Give it a short subject, such as "New sales inquiry". In Message, write what your teammate needs to know. To add an answer, put the cursor where it should go, open Insert answer and choose the question, for example Name. Do the same for Message. Each answer shows up as a small tag with the question's name.</p>
+<p>The final email could read:</p>
 <blockquote>
 <p>New sales inquiry</p>
 <p>Name: Sam</p>
 <p>Message: I would like a quote</p>
 </blockquote>
-<p>To insert an answer, place the cursor in <strong>Message</strong>, open <strong>Insert answer</strong>, and choose <strong>Name</strong>. Repeat for the form's <strong>Message</strong> question. The inserted chips display their question titles, such as <code>{{Name}}</code>, and keep their question identity if the question is renamed. If a chip says <strong>Deleted question</strong>, replace it with one for a current question. Use <strong>Insert answer</strong> rather than typing or pasting a chip label. To personalize Subject too, put the cursor there before opening the same menu.</p>
-<p>Choose <strong>Use HTML</strong> when you need to edit supported HTML markup. An existing formatted rule may already open in <strong>HTML mode</strong>. Before switching it to plain text, review any formatting-loss confirmation. The Subject counter includes stored answer placeholders and encoded characters; follow its warning rather than counting only visible letters. Open <strong>Details</strong> for message and storage limits.</p>
-<p>In the right-hand <strong>Preview</strong>, choose <strong>Refresh</strong> to inspect a recent matching response, To, Subject, body, and condition result. If the completed search finds no match, the picker shows <strong>Latest response (no recent match)</strong>. If asked to <strong>Select a response</strong>, select an available date; the list is not the full response history. Refresh again after changing the draft. This preview does not send email or backfill that sample response; a match alone does not establish all sending requirements. Open its <strong>Preview details</strong> for eligibility information.</p>
-<p>Choose <strong>Save</strong>, check the condition, address, and subject in <strong>Save this rule?</strong>, then choose <strong>Save rule</strong> once. A successful save returns to the sidebar. Saving a rule is separate from turning on alerts for the form.</p>
-<h2>3. Preview and send a test to yourself</h2>
-<p>Use the switch beside <strong>Alerts off</strong> to turn alerts on for this form. If you use Free and <strong>Keep this rule on Free</strong> is offered, select it for <strong>Sales inquiry alert</strong>. Saving here does not automatically replace a selection on another form; choosing this rule can pause the earlier one. Free allows only one selected rule to run across the account. <strong>Send me a test</strong> stays disabled while alerts are off, with an explanation beside it.</p>
-<p>On the saved rule, choose <strong>Send me a test</strong>. <strong>Preview before sending</strong> opens inside the sidebar. Its <strong>Response</strong> picker defaults to <strong>Latest matching response</strong>, using the saved rule and the last 30 days of responses. If the completed search finds no match, the picker shows <strong>Latest response (no recent match)</strong>.</p>
-<p>Check the response date/time. To use a different example, choose an available date in <strong>Response</strong> and wait for its updated preview. The choices are limited, not the full history. If prompted <strong>Select a response</strong>, select one first. Inspect the subject, body, and match result, and confirm that the test recipient is your own Google account. This self-test always goes to you; a nonmatching example does not prove the automatic rule would send. Previewing alone does not send an email.</p>
-<p>Choose <strong>Send test to myself</strong> once to send the displayed test, or <strong>Cancel</strong> to close without sending. Check the result and the send log before trying again.</p>
-<p class="preview-frame"><img alt="Example self-test preview showing the response picker and test recipient" src="assets/screenshots/test-preview@2x.png" /></p>
-<p><em>Example product render with sample registration data; the self-test goes to your own address.</em></p>
-<p><strong>Sent</strong> in Send log means Google accepted the request. It does not confirm inbox delivery. If you also check your own inbox, treat that as a separate check. A test uses Google's sending allowance too.</p>
-<h2>4. Check the condition with a new submission</h2>
-<p>Keep the rule's fixed address set to yourself for this check. Submit a new response through the form with <strong>Inquiry type: Sales</strong>. Open <strong>Send log</strong>, choose <strong>Refresh</strong>, and look for its <strong>Automatic</strong> entry.</p>
-<p>A response whose inquiry type is <strong>Support</strong> should not match this rule. A nonmatching answer is not an email failure, and it need not create a send-log entry. This rule does not send a notification for every response.</p>
-<p>Once you are satisfied, review the production recipient with your teammate and use <strong>Edit</strong> on the rule to replace the test address with the correct authorized mailbox. Review the change through <strong>Save → Save rule</strong>. Confirm that alerts and the rule you intend to use are enabled.</p>
-<p><img alt="Example Formbell send log with sample Sent, Failed, and Unknown records" class="sidebar-example" width="270" height="800" src="assets/screenshots/891daf2-send-log.png" /></p>
-<p><em>Example product render with sample log records. Sent does not confirm inbox delivery.</em></p>
-<h2>Add another route when you need it</h2>
-<p>A single rule has one condition and sends one email. To send Support inquiries to a different address, choose <strong>New rule</strong> in the Rules header and create a separate Support rule. To send a separate confirmation to the respondent, create a confirmation rule.</p>
-<p>When Google Forms email collection is off or can't be checked, you must choose an email source before saving a rule that emails the respondent.</p>
-<p>Free lets one selected rule run at a time across your Google account. Pro costs <strong>$4 per month or $29 per year, taxes included</strong> for more rules across that account's forms, within Google's execution and Formbell's storage limits. You can keep using Free if the Sales rule is all you need.</p>
-<h2>If the notification does not appear</h2>
-<p>Check the selected Google account, the form's alert switch, the rule's active/Free status, the answer and selected comparison value, permissions, and the remaining Google allowance. If the sidebar reports that alerts need reconnecting, use <strong>Reconnect alerts</strong> when offered and check the resulting status. Reconnecting does not automatically recover earlier responses; review any retained eligible entries in Send log.</p>
-<p>Read the log before resending. <strong>Unknown</strong> can mean the earlier request went through, so a manual resend could duplicate it. Resending a retained entry uses the current response and rule, not an archived copy of the original message.</p>
-<p>The log retains the latest 200 entries shared by the form's rules, with only entries from the last 30 days available to view or resend, whichever limit is reached first. Automatic processing does not send responses observed more than 48 hours after submission. Do not rely on this workflow for guaranteed inbox delivery or complete historical backfill.</p>
-<p>For written support, email <strong>runredteam@gmail.com</strong>. Please send the step, app version, error code, and UTC time rather than form responses, recipient addresses, or license keys.</p>
-<p>Google Forms is a trademark of Google LLC. Formbell is an independent app by Lazy Labs.</p>
+<p>Messages are plain text by default. Choose Use HTML if you want basic formatting.</p>
+<p>On the right, the preview shows the email built from a recent matching response. Choose Refresh after you change anything. If no recent response matches, the picker says Latest response (no recent match). The preview never sends anything.</p>
+<p>When it looks right, choose Save, check the summary, and choose Save rule. Saving a rule doesn't turn on alerts for the form. That's the next step.</p>
+
+<h2>3. Turn on alerts and send yourself a test</h2>
+<p>Use the switch next to Alerts off. If you're on Free and Formbell offers Keep this rule on Free, choose it. That makes this the one rule that runs, and pauses a rule you picked on another form.</p>
+<p>Now choose Send me a test on the rule. Formbell shows the email it will send, built from the latest matching response, and sends the test only to you. Choose Send test to myself, or Cancel to close without sending.</p>
+<p><img class="sidebar-example" alt="The test preview, with the response picker and your own address as the recipient" src="assets/screenshots/test-preview@2x.png" width="270"></p>
+<p><em>The test preview. The test always goes to your own address.</em></p>
+<p>In the send log, Sent means Google accepted the email for sending. It doesn't tell you whether it reached the inbox, so check your inbox too. Tests count toward Google's daily sending limit.</p>
+
+<h2>4. Check it with a real response</h2>
+<p>Keep your own address on the rule for now. Submit a new response with Inquiry type set to Sales, then open Send log, choose Refresh and look for an Automatic entry.</p>
+<p>A Support response doesn't match this rule, so Formbell doesn't send anything and may not add a log entry. That's expected.</p>
+<p>When you're happy with it, choose Edit on the rule, change the address to your sales teammate's, and save again.</p>
+<p><img class="sidebar-example" alt="The Formbell send log with Sent, Failed and Unknown entries" src="assets/screenshots/891daf2-send-log.png" width="270" height="800"></p>
+<p><em>The send log, with example entries.</em></p>
+
+<h2>Add another route</h2>
+<p>Each rule has one condition and sends one email. To send Support inquiries somewhere else, choose New rule and make a Support rule. To email the person who filled in the form, make a confirmation rule. If Google Forms email collection is off, or Formbell can't check it, you'll need to choose which question holds their email before you can save.</p>
+<p>On Free, one rule runs at a time. Pro is $4 a month or $29 a year, taxes included, and runs more rules across your account's forms, within Google's limits and Formbell's storage limits.</p>
+
+<h2>If the email doesn't arrive</h2>
+<p>Check that you're signed in to the right Google account, that alerts are on for the form, that the rule is active (and selected, on Free), and that the answer really matches the value in the rule. If the sidebar says alerts need reconnecting, choose Reconnect alerts. Reconnecting doesn't bring back earlier responses, so look in the send log for entries you can still resend.</p>
+<p>Read the log before you resend anything. Unknown can mean the first email did go out, so resending could send it twice. A resend uses the current response and rule, not a saved copy of the original email.</p>
+<p>Each form keeps its latest 200 log entries, and you can view or resend entries from the last 30 days, whichever limit comes first. Formbell doesn't send responses automatically if it sees them more than 48 hours after they were submitted.</p>
+<p>For help, email <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a>. Tell us the step, the app version, any error code and the time in UTC. Please don't send form responses, recipient addresses or license keys.</p>
 </main>
 <footer>
   Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a><br>
