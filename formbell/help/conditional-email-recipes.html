@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="../assets/formbell-mark-f2.svg">
-<title>3 Google Forms conditional email recipes on a free plan | Formbell</title>
+<title>3 answer-based email recipes for Google Forms | Formbell</title>
 <meta name="description" content="Three ready-to-build Google Forms recipes that email someone only when an answer matches: a refund request router, an event registration confirmation, and inquiry routing.">
 <style>
   :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; }
@@ -39,9 +39,9 @@
 <body>
 <main>
   <a class="brand" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></a>
-  <h1>3 Google Forms conditional email recipes on a free plan</h1>
-  <p class="lead">Each recipe emails someone only when an answer matches. Build the form, then add one Formbell rule. Formbell's free plan includes conditional rules: 1 rule at a time across your Google account, with every condition type.</p>
-  <p class="note">These are recipes, not shared copies. Create the questions in your own form, then create the rule in Formbell. Rules do not carry over when a form is copied.</p>
+  <h1>3 answer-based email recipes for Google Forms™</h1>
+  <p class="lead">Each recipe automatically emails someone only when an answer matches. Formbell's free plan includes conditional rules: 1 rule at a time across your Google account, with every condition type. Start with one route on Free; running several routes together needs Pro.</p>
+  <p class="note">These recipes do not include preconfigured Formbell rules. Create the questions in your own form, then create the rule in Formbell for that form.</p>
 
   <h2 id="refund-router">1. Refund request router</h2>
   <p>Send refund requests to billing. Other request types are not emailed by this rule.</p>
@@ -73,13 +73,13 @@
       <tr><td>Attendance</td><td>Multiple choice, required: Yes / No</td><td>The condition</td></tr>
       <tr><td>Name</td><td>Short answer, required</td><td>Greeting</td></tr>
       <tr><td>Session</td><td>Multiple choice or dropdown, required</td><td>Subject and message</td></tr>
-      <tr><td>Email (only if Google Forms email collection is off)</td><td>Short answer, required, with email validation</td><td>The recipient</td></tr>
+      <tr><td>Email (if not using collected email)</td><td>Short answer, required, with email validation</td><td>The recipient</td></tr>
     </tbody>
   </table>
   <h3>Rule</h3>
   <ul>
     <li><strong>When:</strong> Attendance is Yes</li>
-    <li><strong>Send to:</strong> The person who filled in the form. Choose <strong>Email collected by Google Forms</strong> if your form collects emails. Otherwise choose your Email question.</li>
+    <li><strong>Send to:</strong> The person who filled in the form. Choose <strong>Email collected by Google Forms</strong> if your form collects emails. If email collection is off or can't be checked, choose your Email question instead.</li>
     <li><strong>Subject:</strong> "Your registration for" + the Session answer</li>
     <li><strong>Message:</strong> greet them by Name and confirm that you received their registration for the Session</li>
   </ul>
@@ -105,13 +105,14 @@
       <tr><td>Request type is Billing</td><td>Your billing inbox</td></tr>
     </tbody>
   </table>
-  <p class="note">Each route is one rule. On the free plan, one of these rules runs at a time. Running all three together needs Pro: $4 per month or $29 per year, taxes included. Use a single-choice question so each response matches one route. With checkboxes, one response can match several rules and send several emails.</p>
+  <p class="note">Each route is one rule. On the free plan, one of these rules runs at a time. Running all three together needs Pro: $4 per month or $29 per year, taxes included. Use a single-choice question so each response matches one route. With checkbox conditions such as contains or is any of, one response can match several rules and send several emails.</p>
 
-  <h2>Before you turn alerts on</h2>
+  <h2>Preview and send a test</h2>
   <ol>
     <li>Submit a test response that matches the rule, using your own address where an email is needed.</li>
-    <li>In the rule editor, preview the email with that response.</li>
-    <li>Turn alerts on, then use <strong>Send me a test</strong>. The test goes only to your own address.</li>
+    <li>In the rule editor, preview the email with that response, then save the rule.</li>
+    <li>On Free, if another rule is running in your account, choose which rule runs.</li>
+    <li>Turn alerts on for the form, then use <strong>Send me a test</strong>. The test goes only to your own address.</li>
     <li>After a real response arrives, check the <a href="conditional-email-notifications.html">send log</a>. Sent means Google accepted the email for sending. It does not confirm inbox delivery.</li>
   </ol>
 
