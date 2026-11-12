@@ -1,18 +1,23 @@
 {
   "synthetic": true,
-  "purpose": "Help illustrations; example data rendered by unchanged product HTML/CSS at productSource; c7d9550..891daf2 independent delta review PASS per HQ. Not Google-host or live entitlement evidence.",
-  "productSource": "891daf29afec5d6cab1b553eba4f155f8ed4b066",
-  "assetBase": "cc059ac718a6d34e03c70bb078e7178f53e649fe",
-  "capturedAt": "2026-11-02T07:55:44.923Z",
+  "purpose": "Help illustrations rendered in remote GitHub Actions Linux from unchanged v4 product HTML/CSS. Not Google-host, entitlement, sending or delivery evidence.",
+  "productSource": "012b78c3342a493aa4aa1712cd5f98b17cc0ae97",
+  "siteBase": "0edf8eeee7a3d1ba3b482f9c78c565dfb0ad4d1e",
+  "renderCommit": "3b4ebe820af20c593078c12640685c59d2b523ec",
+  "capturedAt": "2026-11-12T03:18:06.557Z",
   "exampleClockUtc": "2026-11-02T10:45:00.000Z",
   "timezone": "UTC",
   "deviceScaleFactor": 2,
   "sourceHashes": {
-    "src/gas/Sidebar.html": "488debe7d1d17112f72ff3fb1a7d3e288762deba90c7f56b8797a3f179609a8c",
-    "src/ui/sidebar.css": "6e5b8957a346f1eafc094520c8793f15f1eff133f7d4b4491a57b4b2069c122d",
-    "src/ui/browser-model.ts": "c80da68c3089219de5fd65a718d6131bf2ce7f3c2ebd5dd2151a0069bb580ec7",
-    "scripts/sidebar-ui.mjs": "d0d0bbae0e4ee88c59dcdd205627244555ab121a0b086d2dc56535b719c23198"
+    "src/gas/Sidebar.html": "0906314d0ecb7550571961266de9e8ed8d32bbbd5aa47c981cbc244849cb799f",
+    "src/ui/sidebar.css": "83d9526feadf0a55982a08f7093c53a48f549ef5248dd3fb5a699b8310c5c927",
+    "src/ui/browser-model.ts": "4e790064c369d21bd07f24b7a26552213f9f38fa4560163eb09c10b7d91ff235",
+    "scripts/sidebar-ui.mjs": "d0d0bbae0e4ee88c59dcdd205627244555ab121a0b086d2dc56535b719c23198",
+    "scripts/help-product-fixture.mjs": "8751bd81e83d7f9f77714a061ef7422771a093644da845db5d11201d92d374e8",
+    "scripts/listing-product-fixture.mjs": "dd2aa5c1aa574167866208d65c5983c389e12a47fa16f3d24d13cb60ace282a8"
   },
+  "rendererSha256": "a6cd81763a71debe348af03abbe3550da4d1ead0fab5126bdbcfb3a4df553d81",
+  "compiledHtmlSha256": "e53bbdce6468d95b9ce78e3cb9630c5b329317c7dd2f2943509f5e1342a2c650",
   "hostStylesheet": {
     "url": "https://ssl.gstatic.com/docs/script/css/add-ons1.css",
     "sha256": "e5bb7a25cbbad1d3138b34a7b25dfe6ed2206c91699ae117657a1529307652ec",
@@ -32,9 +37,11 @@
       }
     ]
   },
-  "compiledHtmlSha256": "48fa167d1e1da9eb70b518a82a81dde9b20c0e32756f09e20c6875221c66e021",
-  "fixtureSha256": "8751bd81e83d7f9f77714a061ef7422771a093644da845db5d11201d92d374e8",
-  "liveVerifiedOnDisk": false,
+  "liveVerifiedOnDisk": true,
+  "fixtureAdaptations": [
+    "Add v4 emailCollection.enabled=true for the same collected-email sample form",
+    "Set the displayed example version to productSource; synthetic rule/response scenes retained"
+  ],
   "injections": [
     "FORMBELL_UI_CONTEXT",
     "FORMBELL_PREVIEW_STUB"
@@ -42,214 +49,263 @@
   "cssOverrides": false,
   "domOrPixelRetouch": false,
   "chromeHostFrame": false,
+  "legacyFilenameCompatibility": true,
   "frames": [
     {
-      "name": "confirmation-rule",
+      "name": "rule-editor",
+      "filename": "891daf2-rule-editor.png",
+      "screen": "editor",
       "mode": "editor",
       "width": 760,
       "height": 620,
-      "filename": "confirmation-rule@2x.png",
       "pngWidth": 1520,
       "pngHeight": 1240,
-      "sha256": "e4cf3c15bf787a50672eecd90623ea4912cf75d74cbfc735071e572336ab9fba",
+      "sha256": "d4d46faf777dea947857023c9cb9489509ad73612602e5428b6555fa223c7c97",
       "audit": {
         "width": 760,
         "height": 620,
         "deviceScaleFactor": 2,
         "scrollWidth": 760,
-        "text": "Send an email when a new response matches.\n\nRule name\nWhen\nName\nSession\nis\ncontains\nis not empty\nis any of\nCondition\nCondition options\nSend to\nThis address\nThe person who filled in the form\nEmail collected by Google Forms\nName\nSession\n\nFor confirmations, verified email collection is safer than an address typed into a text question.\n\nSubject\nWe received your registration\n\n29/250 stored characters\n\nMessage\nInsert answer ▾\nHi {{Name}},\n\nWe received your registration for {{Session}}.\n\nPlain text\nUse HTML\nDetails\nPreview\nRefresh\nLatest matching response\n10:44 AM\n9:45 AM\n\nFormbell\n\nSent from your Google account. Recipients can see your address.\n\nTo: sam@example.test\n\nWe received your registration\n\nThis response matches the condition.\n\nPreview only. Saving does not send this past response.\n\nPreview details\nRule active\nCancel\nSave",
+        "text": "Send an email when a new response matches.\n\nRule name\nWhen\nRequest type\nCustomer name\nMessage\nOrder number\nis\ncontains\nis not empty\nis any of\nChoose value\nRefund\nSales\nSupport\nCondition\nComparison value\nCondition options\nSend to\nThis address\nThe person who filled in the form\nSubject\nRefund request for {{Order number}}\n\n31 of 250 characters\n\nMessage\nInsert answer ▾\n{{Customer name}} requests a refund for {{Order number}}.\n\n{{Message}}\n\nPlain text\nUse HTML\nDetails\nPreview\nRefresh\nLatest matching response\n10:44 AM\n\n10:44 AM · Your local time\n\nFormbell\n\nSent from your Google account. Recipients can see your address.\n\nTo: billing@example.test\n\nRefund request for ORD-1042\n\nThis response matches the condition.\n\nPreview only. Saving won't email this past response.\n\nPreview details\nRule active\nCancel\nSave",
         "developmentBanner": false,
         "requests": [
           "state",
           "previewDraft"
         ],
-        "labels": [],
+        "chips": [
+          "{{Order number}}",
+          "{{Customer name}}",
+          "{{Order number}}",
+          "{{Message}}"
+        ],
+        "previewBody": "Alex Morgan requests a refund for ORD-1042.Please refund my duplicate order.",
+        "testPreview": null
+      }
+    },
+    {
+      "name": "send-log",
+      "filename": "891daf2-send-log.png",
+      "screen": "send-log",
+      "mode": "sidebar",
+      "width": 270,
+      "height": 1260,
+      "pngWidth": 540,
+      "pngHeight": 2520,
+      "sha256": "b2d0622c1961a1f5cd314f27212f64872640ea39777d67425bc5ab26f8979e54",
+      "audit": {
+        "width": 270,
+        "height": 1260,
+        "deviceScaleFactor": 2,
+        "scrollWidth": 270,
+        "text": "Send log\nRefresh\nSent\n10:42 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nFailed\n10:38 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nYour Google account reached its daily sending limit. Resend after the limit resets.\n\nReview and resend\nUnknown\n10:34 AM\nRefund requests\n\nbilling@example.test\n\nAutomatic\n\nResending could send a duplicate.\n\nReview and resend\n\nSent means Google accepted it for sending. Inbox delivery isn't confirmed.\n\nDetails\nRules\nSend log\nPlan\nHelp",
+        "developmentBanner": false,
+        "requests": [
+          "state"
+        ],
+        "chips": [],
+        "previewBody": null,
+        "testPreview": null
+      }
+    },
+    {
+      "name": "confirmation-rule",
+      "filename": "confirmation-rule@2x.png",
+      "screen": "confirmation-rule",
+      "confirmation": true,
+      "mode": "editor",
+      "width": 760,
+      "height": 620,
+      "pngWidth": 1520,
+      "pngHeight": 1240,
+      "sha256": "4af412ede3fdc0fc337ab1e5b0f77fabf44dea852db7dcbeb24de22a14f0ddc2",
+      "audit": {
+        "width": 760,
+        "height": 620,
+        "deviceScaleFactor": 2,
+        "scrollWidth": 760,
+        "text": "Send an email when a new response matches.\n\nRule name\nWhen\nName\nSession\nis\ncontains\nis not empty\nis any of\nCondition\nCondition options\nSend to\nThis address\nThe person who filled in the form\nChoose an email source\nEmail collected by Google Forms\nName\n\nUses the address Google Forms collects with each response.\n\nSubject\nWe received your registration\n\n29 of 250 characters\n\nMessage\nInsert answer ▾\nHi {{Name}},\n\nWe received your registration for {{Session}}.\n\nPlain text\nUse HTML\nDetails\nPreview\nRefresh\nLatest matching response\n10:44 AM\n9:45 AM\n\n10:44 AM · Your local time\n\nFormbell\n\nSent from your Google account. Recipients can see your address.\n\nTo: sam@example.test\n\nWe received your registration\n\nThis response matches the condition.\n\nPreview only. Saving won't email this past response.\n\nPreview details\nRule active\nCancel\nSave",
+        "developmentBanner": false,
+        "requests": [
+          "state",
+          "previewDraft"
+        ],
         "chips": [
           "{{Name}}",
           "{{Session}}"
         ],
-        "testPreview": null,
-        "buttons": [
-          "Save"
-        ],
         "previewBody": "Hi Sam,We received your registration for Friday workshop.",
-        "appScrollHeight": 586,
-        "appClientHeight": 586,
-        "editorScrollTop": 0,
-        "focusedControl": "BODY",
-        "controls": [
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          },
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          },
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          }
-        ],
-        "planDividers": null,
-        "legalVisible": []
+        "testPreview": null
       }
     },
     {
       "name": "confirmation-template",
+      "filename": "confirmation-template@2x.png",
+      "screen": "confirmation-template",
+      "confirmation": true,
       "mode": "editor",
       "scrollEditor": true,
       "width": 760,
       "height": 620,
-      "filename": "confirmation-template@2x.png",
       "pngWidth": 1520,
       "pngHeight": 1240,
-      "sha256": "8894ac91bf589ee93e6862f272851b7f051169da18d447731348073ea8c006e2",
+      "sha256": "61dd884829bef8e2801112da2433e0308ff9141097d64477ab0af86d1d97a96b",
       "audit": {
         "width": 760,
         "height": 620,
         "deviceScaleFactor": 2,
         "scrollWidth": 760,
-        "text": "Send an email when a new response matches.\n\nRule name\nWhen\nName\nSession\nis\ncontains\nis not empty\nis any of\nCondition\nCondition options\nSend to\nThis address\nThe person who filled in the form\nEmail collected by Google Forms\nName\nSession\n\nFor confirmations, verified email collection is safer than an address typed into a text question.\n\nSubject\nWe received your registration\n\n29/250 stored characters\n\nMessage\nInsert answer ▾\nHi {{Name}},\n\nWe received your registration for {{Session}}.\n\nPlain text\nUse HTML\nDetails\nPreview\nRefresh\nLatest matching response\n10:44 AM\n9:45 AM\n\nFormbell\n\nSent from your Google account. Recipients can see your address.\n\nTo: sam@example.test\n\nWe received your registration\n\nThis response matches the condition.\n\nPreview only. Saving does not send this past response.\n\nPreview details\nRule active\nCancel\nSave",
+        "text": "Send an email when a new response matches.\n\nRule name\nWhen\nName\nSession\nis\ncontains\nis not empty\nis any of\nCondition\nCondition options\nSend to\nThis address\nThe person who filled in the form\nChoose an email source\nEmail collected by Google Forms\nName\n\nUses the address Google Forms collects with each response.\n\nSubject\nWe received your registration\n\n29 of 250 characters\n\nMessage\nInsert answer ▾\nHi {{Name}},\n\nWe received your registration for {{Session}}.\n\nPlain text\nUse HTML\nDetails\nPreview\nRefresh\nLatest matching response\n10:44 AM\n9:45 AM\n\n10:44 AM · Your local time\n\nFormbell\n\nSent from your Google account. Recipients can see your address.\n\nTo: sam@example.test\n\nWe received your registration\n\nThis response matches the condition.\n\nPreview only. Saving won't email this past response.\n\nPreview details\nRule active\nCancel\nSave",
         "developmentBanner": false,
         "requests": [
           "state",
           "previewDraft"
         ],
-        "labels": [],
         "chips": [
           "{{Name}}",
           "{{Session}}"
         ],
-        "testPreview": null,
-        "buttons": [
-          "Save"
-        ],
         "previewBody": "Hi Sam,We received your registration for Friday workshop.",
-        "appScrollHeight": 586,
-        "appClientHeight": 586,
-        "editorScrollTop": 203,
-        "focusedControl": "BODY",
-        "controls": [
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          },
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          },
-          {
-            "tag": "SELECT",
-            "radius": "7px",
-            "border": "1px",
-            "padding": "5px 24px 5px 8px"
-          }
-        ],
-        "planDividers": null,
-        "legalVisible": []
+        "testPreview": null
       }
     },
     {
       "name": "test-preview",
+      "filename": "test-preview@2x.png",
+      "screen": "test-preview",
+      "confirmation": true,
       "mode": "sidebar",
       "testPreview": true,
       "width": 270,
       "height": 1100,
-      "filename": "test-preview@2x.png",
       "pngWidth": 540,
       "pngHeight": 2200,
-      "sha256": "e0da16877cf532405cb2d22a8bec2d071b5125f2f4265878aada6610a5fa3184",
+      "sha256": "977f2d99e5267a6e3d215e612f20add96ced8c833b0c3adf6eb58e166d82280f",
       "audit": {
         "width": 270,
         "height": 1100,
         "deviceScaleFactor": 2,
         "scrollWidth": 270,
-        "text": "Alerts on\nFree\n\nFor matching new responses in this form.\n\nRULES\n1 rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nRespondent email collected by Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
+        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
         "developmentBanner": false,
         "requests": [
           "state",
           "previewSend"
         ],
-        "labels": [],
         "chips": [],
+        "previewBody": null,
         "testPreview": {
           "title": "Preview before sending",
           "selectedResponse": "",
           "responseChoices": 3,
           "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 10:44 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
           "body": "Hi Sam,We received your registration for Friday workshop."
-        },
-        "buttons": [
-          "Send test to myself"
-        ],
-        "previewBody": null,
-        "appScrollHeight": 1051,
-        "appClientHeight": 1051,
-        "editorScrollTop": null,
-        "focusedControl": "BODY",
-        "controls": [],
-        "planDividers": null,
-        "legalVisible": []
+        }
       }
     },
     {
       "name": "test-response-selected",
+      "filename": "test-response-selected@2x.png",
+      "screen": "test-response-selected",
+      "confirmation": true,
       "mode": "sidebar",
       "testPreview": true,
       "selectResponse": true,
       "width": 270,
       "height": 1100,
-      "filename": "test-response-selected@2x.png",
       "pngWidth": 540,
       "pngHeight": 2200,
-      "sha256": "32d07800c018b2a217113b9d4e20ee3c9bb11ebe491cbdff69e61c66bde59d7b",
+      "sha256": "2dc7593b9c48cc4a9004607b3638ff1b5afd10913885852ffc2905449673bcc9",
       "audit": {
         "width": 270,
         "height": 1100,
         "deviceScaleFactor": 2,
         "scrollWidth": 270,
-        "text": "Alerts on\nFree\n\nFor matching new responses in this form.\n\nRULES\n1 rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nRespondent email collected by Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
+        "text": "Alerts on\nFree\n\nEmails go out for new matching responses.\n\nRULES · 1\nNew rule\nRegistration confirmation\nActive · Selected on Free\nWhen\nName is not empty\n↓\nEmail\nEmail collected by Google Forms\nEdit\nSend me a test\n\nFree runs 1 rule at a time across your Google account.\n\nView plan details\nRules\nSend log\nPlan\nHelp\nPreview before sending\nResponse\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails\nSend test to myself\nCancel",
         "developmentBanner": false,
         "requests": [
           "state",
           "previewSend",
           "previewSend"
         ],
-        "labels": [],
         "chips": [],
+        "previewBody": null,
         "testPreview": {
           "title": "Preview before sending",
           "selectedResponse": "synthetic-confirmation-01",
           "responseChoices": 3,
           "content": "Response\nLatest matching response\n10:44 AM\n9:45 AM\n\nResponse: 9:45 AM\n\nRecipient: reviewer@example.test\n\nSubject: We received your registration\n\nThis test goes only to your own address.\n\nThis response matches the rule.\n\nSent from your Google account. Recipients can see your address.\n\nConfirmation expires: 10:50 AM\n\nDetails",
           "body": "Hi Alex,We received your registration for Monday workshop."
-        },
-        "buttons": [
-          "Send test to myself"
-        ],
-        "previewBody": null,
-        "appScrollHeight": 1051,
-        "appClientHeight": 1051,
-        "editorScrollTop": null,
-        "focusedControl": "BODY",
-        "controls": [],
-        "planDividers": null,
-        "legalVisible": []
+        }
       }
     }
   ],
-  "blockedExternalRequests": [],
-  "errors": [],
-  "browser": "Chrome/156.0.8078.74"
+  "browser": "Chrome/156.0.8078.79",
+  "browserErrors": [],
+  "blockedExternal": [],
+  "requests": [
+    {
+      "frame": "rule-editor",
+      "action": "state"
+    },
+    {
+      "frame": "rule-editor",
+      "action": "previewDraft"
+    },
+    {
+      "frame": "send-log",
+      "action": "state"
+    },
+    {
+      "frame": "confirmation-rule",
+      "action": "state"
+    },
+    {
+      "frame": "confirmation-rule",
+      "action": "previewDraft"
+    },
+    {
+      "frame": "confirmation-template",
+      "action": "state"
+    },
+    {
+      "frame": "confirmation-template",
+      "action": "previewDraft"
+    },
+    {
+      "frame": "test-preview",
+      "action": "state"
+    },
+    {
+      "frame": "test-preview",
+      "action": "previewSend"
+    },
+    {
+      "frame": "test-response-selected",
+      "action": "state"
+    },
+    {
+      "frame": "test-response-selected",
+      "action": "previewSend"
+    },
+    {
+      "frame": "test-response-selected",
+      "action": "previewSend"
+    }
+  ],
+  "remoteMutations": 0,
+  "ci": {
+    "repository": "lazypl82/formbell",
+    "run": 43147251014,
+    "url": "https://github.com/lazypl82/formbell/actions/runs/43147251014",
+    "workflowCommit": "bd31de38ed5bc632b57e2b4b19e691c4bd275911",
+    "artifact": 13911593042,
+    "uploadedZipSha256": "9d0546b3b50a8f63e6137de2bb5870f833c95c76690449ec9557454e33a24c59"
+  },
+  "preservedGoogleFormsImage": {
+    "filename": "forms-settings-email-receipts.png",
+    "sha256": "3da7d9f46becbf8fef7cdd5c4bc406478be21c0803d46ab45c683ea7730b67b9",
+    "changed": false,
+    "reverified": false,
+    "status": "U"
+  }
 }
