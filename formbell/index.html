@@ -29,6 +29,11 @@
   a:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
   .brand, .formbell-header { display:flex; align-items:center; gap:10px; }
   .brand img, .formbell-header img { width:32px; height:32px; flex:none; }
+  .install { display:inline-block; background:#1c1c1e; color:#fff; text-decoration:none; font-weight:600; padding:12px 20px; border-radius:8px; }
+  .install:hover { background:#000; }
+  .install:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
+  .cta { margin:0 0 8px; }
+  .cta-note { color:var(--muted); font-size:.95rem; margin:0 0 8px; }
 </style>
 </head>
 <body>
@@ -36,6 +41,8 @@
   <span class="brand"><img src="assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></span>
   <h1>Send the right email when a Google Form response comes in.</h1>
   <p class="lead">Formbell is a Google Forms add-on. You set a rule, such as "if the answer to this question is X, email this person", and Formbell sends a personalized email when a matching response arrives.</p>
+  <p class="cta"><a class="install" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install from Google Workspace Marketplace</a></p>
+  <p class="cta-note">Free plan included. Pro is optional.</p>
 
   <h2>What you get</h2>
   <div class="card">
@@ -51,10 +58,10 @@
 
   <h2>Pricing</h2>
   <div class="price">
-    <div class="card"><strong>Free</strong>1 rule per Google account. Every condition type is included.</div>
+    <div class="card"><strong>Free</strong>1 rule at a time across your Google account. Every condition type is included.</div>
     <div class="card"><strong>Pro: $4 / month</strong>or $29 / year, taxes included. More rules across every form in your Google account, within Google's sending and execution limits and Formbell's storage limits.</div>
   </div>
-  <p class="note">Prices and the free limit are shown inside the add-on before you pay. Dodo Payments handles Pro purchases as merchant of record. To manage or cancel a subscription, use the Dodo Payments customer portal if available or contact support.</p>
+  <p class="note">Prices and the free limit are shown inside the add-on before you pay. Dodo Payments handles Pro purchases as merchant of record. To cancel, send one email to runredteam@gmail.com or use the Dodo Payments customer portal. Cancellation stops future renewals. See the <a href="terms.html">Terms</a> for the UK cooling-off right and other refund requests.</p>
 
   <h2>Guides</h2>
   <ul>
@@ -65,7 +72,7 @@
   <h2>Your data</h2>
   <div class="card">
     <ul>
-      <li>Formbell runs inside your Google account. Form responses are processed there and are not sent to our servers.</li>
+      <li>Form responses are processed in Google Apps Script under your Google account and are not sent to Lazy Labs servers. Emails go only to the recipients your rules set. Operational diagnostics in Google logs may be accessible to Lazy Labs, as the Privacy Policy explains.</li>
       <li>Rules and the send log are stored with your form. Each form shares its latest 200 log entries. Entries from the last 30 days can be viewed or resent, whichever limit is reached first. Expired entries are deleted the next time Formbell runs. You can delete a form's shared Formbell rules and log from that form.</li>
       <li>To check a Pro license, Formbell sends the license key and activation information to Dodo Payments. It never sends response content or recipient addresses.</li>
     </ul>
