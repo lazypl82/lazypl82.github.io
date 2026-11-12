@@ -56,17 +56,17 @@
         <td>Free plan. Pro is $4 per month or $29 per year, taxes included, per Google account.<sup><a href="#s1">1</a></sup></td>
         <td>Free plan. Standard is $49.95 per year and Enterprise is $79.95 per year, per Google account. The pricing page does not say whether tax is included.<sup><a href="#s2">2</a></sup></td></tr>
       <tr><th scope="row">Free plan</th>
-        <td>1 rule at a time across your Google account, with every condition type. Google's sending limits apply.<sup><a href="#s1">1</a></sup></td>
+        <td>1 rule at a time across your Google account, with every condition type. Google's sending limits and Formbell's storage limits apply.<sup><a href="#s1">1</a></sup></td>
         <td>20 emails per day and a single notification. Emails carry the maker's footer.<sup><a href="#s3">3</a></sup></td></tr>
       <tr><th scope="row">Conditions</th>
         <td>One condition per rule: is, contains, is not empty, or is any of. Included in the free plan.<sup><a href="#s1">1</a></sup></td>
-        <td>Not in the free plan. Paid plans add conditions, including AND/OR logic and regular expressions.<sup><a href="#s2">2</a></sup></td></tr>
+        <td>Not in the free plan. Paid plans add conditions, including AND/OR logic and regular expressions.<sup><a href="#s2">2</a>,&#8202;<a href="#s3">3</a></sup></td></tr>
       <tr><th scope="row">Recipients</th>
         <td>For each matching response, one address: a fixed address or an address from that response. No CC or BCC.<sup><a href="#s1">1</a></sup></td>
-        <td>CC and BCC on paid plans, including addresses taken from answers.<sup><a href="#s3">3</a></sup></td></tr>
+        <td>CC and BCC on paid plans, including addresses taken from answers.<sup><a href="#s3">3</a>,&#8202;<a href="#s6">6</a></sup></td></tr>
       <tr><th scope="row">Beyond email</th>
         <td>Email only. No file attachments, SMS or chat notifications.</td>
-        <td>Enterprise adds Google Drive file attachments and SMS through your own Twilio account.<sup><a href="#s4">4</a>,&#8202;<a href="#s5">5</a></sup></td></tr>
+        <td>Enterprise adds Google Drive file attachments and SMS through your own Twilio account.<sup><a href="#s3">3</a>,&#8202;<a href="#s4">4</a>,&#8202;<a href="#s5">5</a></sup></td></tr>
       <tr><th scope="row">Response data</th>
         <td>Processed in Google Apps Script under your Google account. Not sent to Lazy Labs servers.<sup><a href="#s1">1</a></sup></td>
         <td>The maker says add-on data stays in your Google account and is not stored on its servers.<sup><a href="#s2">2</a></sup></td></tr>
@@ -85,7 +85,7 @@
   <ul>
     <li>one condition per rule covers your routing, and you want conditions on the free plan.</li>
     <li>you want a lower Pro price: $29 per year, taxes included.</li>
-    <li>you want to preview the email with a recent response and send yourself a test before alerts go live.</li>
+    <li>you want to preview the email with a recent response and send a test to your own address.</li>
     <li>you want a send log that shows whether a recorded send was Sent, Failed (with a reason) or Unknown. Sent means Google accepted the email for sending. It does not confirm inbox delivery.</li>
   </ul>
 
@@ -100,6 +100,7 @@
     <li id="s3">Digital Inspiration: <a href="https://digitalinspiration.com/docs/form-notifications/google-forms-premium">free and premium plan comparison</a>.</li>
     <li id="s4">Digital Inspiration: <a href="https://digitalinspiration.com/docs/form-notifications/send-file-attachments">file attachments</a>.</li>
     <li id="s5">Digital Inspiration: <a href="https://digitalinspiration.com/docs/form-notifications/sms-notification">SMS notifications</a>.</li>
+    <li id="s6">Digital Inspiration: <a href="https://digitalinspiration.com/docs/form-notifications/cc-email">CC and BCC</a>.</li>
   </ol>
 
   <footer>
