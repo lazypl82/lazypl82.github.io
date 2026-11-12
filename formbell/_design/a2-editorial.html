@@ -32,16 +32,16 @@
   .num { font:600 14px/24px Inter, system-ui, sans-serif; display:flex; align-items:center; gap:8px; margin-bottom:8px; }
   .num::before { content:""; width:16px; height:3px; background:var(--marigold); border-radius:2px; }
   h2 { font-weight:500; font-size:32px; line-height:40px; letter-spacing:-.01em; margin-bottom:8px; }
-  h3 { font-style:italic; font-weight:400; font-size:20px; line-height:32px; margin:32px 0 8px; }
+  h3 { font:600 14px/24px Inter, system-ui, sans-serif; color:var(--ink); margin:32px 0 8px; }
   .need { list-style:none; padding:0; margin:0; }
   .need li { display:flex; gap:16px; border-bottom:1px solid var(--rule); padding:8px 0 7px; }
   .need li:first-child { border-top:1px solid var(--rule); padding-top:7px; }
   .need .q { flex:0 0 168px; }
-  .need .t { color:var(--soft); font-style:italic; }
+  .need .t { color:var(--soft); }
   .method { padding-left:24px; margin:0; }
   .method li { padding-left:8px; margin-bottom:8px; }
   .rule { font-size:24px; line-height:32px; margin:24px 0 24px; }
-  .rule i { font-style:italic; }
+  .rule b, .method b { font-weight:500; }
   .after { margin-top:24px; }
   .cta { margin-top:64px; display:flex; flex-wrap:wrap; align-items:center; gap:16px; font:500 15px/24px Inter, system-ui, sans-serif; }
   .cta a { background:var(--ink); color:#fff; text-decoration:none; padding:12px 24px; border-radius:999px; }
@@ -79,7 +79,7 @@
       <li><span class="q">Message</span><span class="t">paragraph</span></li>
     </ul>
     <h3>The rule</h3>
-    <p class="rule">When <i>Request type</i> is <i>Refund</i>, email your billing address.</p>
+    <p class="rule">When <b>Request type</b> is <b>Refund</b>, email your billing address.</p>
     <p>Put the order number in the subject. Add the name, order number and message to the body with Insert answer.</p>
     <p class="soft after">Formbell only sends the email. You still approve and process the refund yourself.</p>
   </section>
@@ -95,7 +95,7 @@
       <li><span class="q">Session</span><span class="t">multiple choice or dropdown</span></li>
     </ul>
     <h3>The rule</h3>
-    <p class="rule">When <i>Attendance</i> is <i>Yes</i>, email the person who filled in the form.</p>
+    <p class="rule">When <b>Attendance</b> is <b>Yes</b>, email the person who filled in the form.</p>
     <p>If your form collects email addresses, choose the email Google Forms collects. If it doesn't, add a short-answer Email question with email validation and choose that instead.</p>
     <p class="soft after">Say you received their registration. Don't promise a seat or a payment the form can't check.</p>
   </section>
@@ -112,9 +112,9 @@
     </ul>
     <h3>The rules</h3>
     <ol class="method">
-      <li>When <i>Request type</i> is <i>Sales</i>, email your sales address.</li>
-      <li>When <i>Request type</i> is <i>Support</i>, email your support address.</li>
-      <li>When <i>Request type</i> is <i>Billing</i>, email your billing address.</li>
+      <li>When <b>Request type</b> is <b>Sales</b>, email your sales address.</li>
+      <li>When <b>Request type</b> is <b>Support</b>, email your support address.</li>
+      <li>When <b>Request type</b> is <b>Billing</b>, email your billing address.</li>
     </ol>
     <p class="soft after">On Free you can run one route at a time. All three together needs Pro, $4 a month or $29 a year, taxes included.</p>
   </section>
