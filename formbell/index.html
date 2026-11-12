@@ -5,92 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="assets/formbell-mark-f2.svg">
 <title>Formbell: conditional email alerts for Google Forms</title>
-<meta name="description" content="Formbell sends personalized emails when a Google Forms response matches your rules. Clear pricing and a visible send log.">
-<style>
-  :root { --ink:#25262b; --muted:#59616d; --line:#dde0e6; --bg:#f7f7f8; --accent:#1c1c1e; --card:#ffffff; }
-  * { box-sizing:border-box; }
-  body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
-  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
-  h1 { font-size:2.1rem; line-height:1.2; margin:0 0 12px; }
-  h2 { font-size:1.3rem; margin:40px 0 12px; }
-  p.lead { font-size:1.15rem; color:var(--muted); margin:0 0 28px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:14px 0; }
-  .price { display:flex; gap:14px; flex-wrap:wrap; }
-  .price .card { flex:1 1 200px; margin:0; }
-  .price strong { font-size:1.4rem; display:block; }
-  ul { padding-left:20px; }
-  li { margin:6px 0; }
-  .note { color:var(--muted); font-size:.95rem; }
-  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; }
-  a { color:var(--accent); }
-  .brand { font-weight:700; font-size:1.05rem; color:var(--accent); margin-bottom:28px; display:block; }
-  /* A1 brand: marigold is decorative; links retain dark, underlined text. */
-  h1::after { content:""; display:block; width:42px; height:4px; border-radius:3px; background:#ffb300; margin-top:14px; }
-  a:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
-  .brand, .formbell-header { display:flex; align-items:center; gap:10px; }
-  .brand img, .formbell-header img { width:32px; height:32px; flex:none; }
-  .install { display:inline-block; background:#1c1c1e; color:#fff; text-decoration:none; font-weight:600; padding:12px 20px; border-radius:8px; }
-  .install:hover { background:#000; }
-  .install:focus-visible { outline:2px solid #1c1c1e; outline-offset:2px; box-shadow:0 0 0 4px #ffb300; }
-  .cta { margin:0 0 8px; }
-  .cta-note { color:var(--muted); font-size:.95rem; margin:0 0 8px; }
-</style>
+<meta name="description" content="Formbell is a Google Forms add-on that emails the right person when an answer matches your rule. Conditional rules are included in the free plan. Pro is $4 a month or $29 a year.">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<header class="top">
+  <a class="mark" href="index.html"><img src="assets/formbell-mark-f2.svg" alt="">Formbell</a>
+  <nav><a href="help/conditional-email-notifications.html">Guides</a><a href="#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a></nav>
+</header>
 <main>
-  <span class="brand"><img src="assets/formbell-mark-f2.svg" alt="" width="32" height="32"><span>Formbell</span></span>
-  <h1>Send the right email when a Google Form response comes in.</h1>
-  <p class="lead">Formbell is a Google Forms add-on. You set a rule, such as "if the answer to this question is X, email this person", and Formbell sends a personalized email when a matching response arrives.</p>
-  <p class="cta"><a class="install" href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install from Google Workspace Marketplace</a></p>
-  <p class="cta-note">Free plan included. Pro is optional.</p>
+  <p class="kicker">Google Forms add-on</p>
+  <h1>Email the right person when a form answer matches</h1>
+  <p class="dek">You pick a question and an answer, and choose who gets the email. When a matching response arrives, Formbell sends it automatically from your Google account.</p>
+  <div class="cta"><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install from Google Workspace Marketplace</a><span>Conditional rules are included in the free plan</span></div>
 
-  <h2>What you get</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Conditional rules.</strong> Match on a question's answer (equals, contains, not empty, one of a list) and send to a fixed address or to an email from the response.</li>
-      <li><strong>Personalized emails.</strong> Put response values into the subject and body. Basic HTML is supported.</li>
-      <li><strong>Preview and test.</strong> Preview a recent response and send a test to yourself.</li>
-      <li><strong>A send log you can read.</strong> The send log shows Sent, Failed (with a reason), or Unknown. A send still in progress appears as Processing. "Sent" means Google accepted the email for sending. It does not confirm inbox delivery, and Formbell says so.</li>
-      <li><strong>Resend when needed.</strong> Pick a failed or unknown entry and send it again. Resends are labeled.</li>
-      <li><strong>Your Google sending limits, shown plainly.</strong> Formbell shows Google's remaining recipient count and how many recipients it requested today.</li>
-    </ul>
-  </div>
+  <figure>
+    <img src="help/assets/screenshots/891daf2-rule-editor.png" width="760" height="620" alt="The Formbell rule editor: when Request type is Refund, email billing, with a preview of the email">
+    <figcaption>A rule in the Formbell editor, with the email preview on the right.</figcaption>
+  </figure>
 
-  <h2>Pricing</h2>
-  <div class="price">
-    <div class="card"><strong>Free</strong>1 rule at a time across your Google account. Every condition type is included.</div>
-    <div class="card"><strong>Pro</strong>$4 / month or $29 / year, taxes included. More rules across every form in your Google account, within Google's sending and execution limits and Formbell's storage limits.</div>
+  <h2>What it does</h2>
+  <p>You write rules like "if Request type is Sales, email the sales team." Each rule checks one question with is, contains, is not empty or is any of. It sends to a fixed address, or to an email address from the response.</p>
+  <p>You can put answers into the subject and the message, and use basic HTML. You can preview the email with a recent response, and send yourself a test.</p>
+  <p>The send log shows Sent, Failed with a reason, or Unknown for each recorded send, and Processing while a send is still in progress. Sent means Google accepted the email for sending. It doesn't tell you whether the email reached the inbox.</p>
+  <p>You can review and resend eligible failed or unknown entries, and resends are labeled. Formbell also shows Google's remaining recipient count and how many recipients it requested today.</p>
+
+  <h2 id="pricing">Pricing</h2>
+  <div class="plans">
+    <div>
+      <h3>Free</h3>
+      <p class="price">$0</p>
+      <p>1 rule at a time across your Google account, with every condition type.</p>
+    </div>
+    <div>
+      <h3>Pro</h3>
+      <p class="price">$4 a month or $29 a year</p>
+      <p>Taxes included. More rules across every form in your Google account, within Google's sending and execution limits and Formbell's storage limits.</p>
+    </div>
   </div>
-  <p class="note">Prices and the free limit are shown inside the add-on before you pay. Dodo Payments handles Pro purchases as merchant of record. To cancel, send one email to runredteam@gmail.com or use the Dodo Payments customer portal. Cancellation stops future renewals. See the <a href="terms.html">Terms</a> for the UK cooling-off right and other refund requests.</p>
+  <p class="soft">You see the price and the free limit inside the add-on before you pay. Dodo Payments handles Pro purchases as merchant of record. To cancel, send one email to runredteam@gmail.com or use the Dodo Payments customer portal. Cancelling stops future renewals. The <a href="terms.html">Terms</a> explain the UK cooling-off right and other refund requests.</p>
 
   <h2>Guides</h2>
   <ul>
+    <li><a href="help/conditional-email-recipes.html">Three forms that email the right person</a></li>
     <li><a href="help/conditional-email-notifications.html">Send email notifications based on Google Forms answers</a></li>
     <li><a href="help/personalized-confirmation-email.html">Send a personalized confirmation email</a></li>
   </ul>
 
   <h2>Your data</h2>
-  <div class="card">
-    <ul>
-      <li>Form responses are processed in Google Apps Script under your Google account and are not sent to Lazy Labs servers. Rule emails go to the recipients you choose, and test emails go only to your own address. Operational diagnostics in Google logs may be accessible to Lazy Labs, as the Privacy Policy explains.</li>
-      <li>Rules and the send log are stored with your form. Each form shares its latest 200 log entries. Entries from the last 30 days can be viewed or resent, whichever limit is reached first. Expired entries are deleted the next time Formbell runs. You can delete a form's shared Formbell rules and log from that form.</li>
-      <li>To check a Pro license, Formbell sends the license key and activation information to Dodo Payments. It never sends response content or recipient addresses.</li>
-    </ul>
-    <p class="note">Full details: <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
-  </div>
+  <p>Form responses are processed in Google Apps Script under your Google account, and are not sent to Lazy Labs servers. Rule emails go to the recipients you choose, and test emails go only to you. Operational diagnostics in Google logs may be visible to Lazy Labs, as the <a href="privacy.html">Privacy Policy</a> explains.</p>
+  <p>Rules and the send log are stored with your form. Each form keeps its latest 200 log entries, and you can view or resend entries from the last 30 days, whichever limit comes first. Expired entries are deleted the next time Formbell runs. You can delete a form's Formbell rules and log from that form.</p>
+  <p>To check a Pro license, Formbell sends the license key and activation information to Dodo Payments. It never sends response content or recipient addresses.</p>
 
-  <h2>Honest limits</h2>
-  <div class="card">
-    <ul>
-      <li>Google limits how many emails a script can send per day. Formbell works within those limits and does not promise unlimited sending.</li>
-      <li>Responses observed more than 48 hours after submission are not sent automatically. Retained eligible entries may be available for manual resend.</li>
-    </ul>
-  </div>
-
-  <footer>
-    Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a><br>
-    <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
-  </footer>
+  <h2>Limits</h2>
+  <p>Google limits how many emails a script can send each day. Formbell works within those limits and doesn't promise unlimited sending.</p>
+  <p>Responses that Formbell sees more than 48 hours after they were submitted aren't sent automatically. You may still be able to resend eligible entries by hand while they are in the log.</p>
 </main>
+<footer>
+  Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
 </body>
 </html>

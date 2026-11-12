@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../assets/formbell-mark-f2.svg">
+<title>3 answer-based email recipes for Google Forms | Formbell</title>
+<meta name="description" content="Three Google Forms recipes that automatically email someone only when an answer matches: route refund requests, confirm event registrations, and send inquiries to the right person.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/formbell-mark-f2.svg" alt="">Formbell</a>
+  <nav><a href="conditional-email-notifications.html" aria-current="page">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install</a></nav>
+</header>
+<main>
+  <p class="kicker">Recipes</p>
+  <h1>Three forms that email the right person, and only them</h1>
+  <p class="dek">Each recipe is a few Google Forms™ questions and one Formbell rule. Formbell sends the email automatically, but only when an answer matches.</p>
+  <p class="soft">On the free plan you can run one rule at a time across your Google account, with every condition type. Running several routes at once needs Pro.</p>
+
+  <figure>
+    <img src="assets/screenshots/891daf2-rule-editor.png" width="760" height="620" alt="The Formbell rule editor with a refund rule and a preview of the email">
+    <figcaption>A finished rule in the Formbell editor, with the email preview on the right.</figcaption>
+  </figure>
+
+  <section class="section" id="refund-router">
+    <p class="num">Recipe 1</p>
+    <h2>Refund requests go to billing</h2>
+    <p>Your billing inbox gets refund requests, and nothing else.</p>
+    <h3>You'll need</h3>
+    <ul class="ruled">
+      <li><span class="k">Request type</span><span class="v">multiple choice, required: Refund, Sales, Support</span></li>
+      <li><span class="k">Order number</span><span class="v">short answer, required</span></li>
+      <li><span class="k">Name</span><span class="v">short answer</span></li>
+      <li><span class="k">Message</span><span class="v">paragraph</span></li>
+    </ul>
+    <h3>The rule</h3>
+    <p class="rule">When <b>Request type</b> is <b>Refund</b>, email your billing address.</p>
+    <p>Put the order number in the subject. Add the name, order number and message to the body with Insert answer. You don't need to collect respondent emails, because the email goes to your own inbox.</p>
+    <p class="soft">Formbell only sends the email. You still approve and process the refund yourself.</p>
+  </section>
+
+  <section class="section" id="event-confirmation">
+    <p class="num">Recipe 2</p>
+    <h2>Confirm event registrations</h2>
+    <p>When someone says yes, they get an email that names the session they picked.</p>
+    <h3>You'll need</h3>
+    <ul class="ruled">
+      <li><span class="k">Attendance</span><span class="v">multiple choice, required: Yes, No</span></li>
+      <li><span class="k">Name</span><span class="v">short answer, required</span></li>
+      <li><span class="k">Session</span><span class="v">multiple choice or dropdown, required</span></li>
+      <li><span class="k">Email</span><span class="v">short answer with email validation, only if you don't use collected email</span></li>
+    </ul>
+    <h3>The rule</h3>
+    <p class="rule">When <b>Attendance</b> is <b>Yes</b>, email the person who filled in the form.</p>
+    <p>If your form collects email addresses, choose Email collected by Google Forms. If collection is off or Formbell can't check it, choose your Email question instead.</p>
+    <p class="soft">Say you received their registration. Don't promise a seat or a payment the form can't check.</p>
+  </section>
+
+  <section class="section" id="inquiry-routing">
+    <p class="num">Recipe 3</p>
+    <h2>Send each inquiry to the right person</h2>
+    <p>Sales questions go to sales, and support questions go to support.</p>
+    <h3>You'll need</h3>
+    <ul class="ruled">
+      <li><span class="k">Request type</span><span class="v">multiple choice, required: Sales, Support, Billing</span></li>
+      <li><span class="k">Name</span><span class="v">short answer</span></li>
+      <li><span class="k">Message</span><span class="v">paragraph, required</span></li>
+    </ul>
+    <h3>The rules</h3>
+    <ol>
+      <li>When <b>Request type</b> is <b>Sales</b>, email your sales address.</li>
+      <li>When <b>Request type</b> is <b>Support</b>, email your support address.</li>
+      <li>When <b>Request type</b> is <b>Billing</b>, email your billing address.</li>
+    </ol>
+    <p class="soft">On Free you can run one route at a time. All three together needs Pro, $4 a month or $29 a year, taxes included. Keep Request type a single-choice question. If you use checkboxes with contains or is any of, one response can match several rules, and Formbell sends one email per matching rule.</p>
+  </section>
+
+  <section class="section" id="try-it">
+    <h2>Try it before real responses arrive</h2>
+    <ol>
+      <li>Submit a response that matches the rule. Use your own address wherever an email is needed.</li>
+      <li>Open the rule, preview the email with that response, and save.</li>
+      <li>On Free, if another rule is already running, choose which one runs.</li>
+      <li>Turn alerts on, then click Send me a test. Formbell sends the test only to you.</li>
+      <li>When real responses come in, check the <a href="conditional-email-notifications.html">send log</a>. Sent means Google accepted the email for sending. It doesn't tell you whether the email reached the inbox.</li>
+    </ol>
+    <p class="soft">Each rule has one condition and one recipient address, with no CC or BCC. Google's daily sending limits apply. These recipes don't come with ready-made Formbell rules, so you create the rule in your own form.</p>
+  </section>
+
+  <div class="cta"><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install Formbell</a><span>Free plan included</span></div>
+  <p class="soft">Step by step: <a href="conditional-email-notifications.html">route notifications by answer</a> · <a href="personalized-confirmation-email.html">send a personalized confirmation</a></p>
+</main>
+<footer>
+  Formbell is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:runredteam@gmail.com">runredteam@gmail.com</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
+</body>
+</html>
