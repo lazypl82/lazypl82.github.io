@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-aOET5IgVW9bZEdFkPCiL80cx0tdoBm5FY4XA4FYkAEc='; style-src 'sha256-XUJ4E9gZE5mmA7VwIUBwEOb7PAn/t3bYqi8fH6Kr2E8='; img-src data:; font-src 'none'; connect-src 'none'; object-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-99m1m+Kja0yfX76dJfBJc5c6OBLTgKP6gS+nnMG+Hyo='; style-src 'sha256-kHMPS76e8itLlzC9lYot82CzSjKW6x4hfCAI3LpQRHQ='; img-src data:; font-src 'none'; connect-src 'none'; object-src 'none'; form-action 'none'; base-uri 'none'">
 <script>(()=>{
   'use strict';
   let query=location.search,clean=false;
   try{history.replaceState(null,'','/formbell/thank-you.html');clean=true}catch{query=''}
   const fallback='Check the email from Dodo Payments for your license key';
+  function fitFields(){
+    for(const field of document.querySelectorAll('#keys textarea')){
+      field.rows=1;
+      while(field.rows<20&&field.scrollHeight>field.clientHeight+2)field.rows++;
+    }
+  }
   function reset(){
     query='';
     for(const field of document.querySelectorAll('#keys textarea'))field.value='';
@@ -60,15 +66,16 @@
       row.append(label,field,button);container.append(row);
     }
     keys.fill('');keys=null;
-    document.getElementById('fallback').hidden=true;document.getElementById('licensePanel').hidden=false;
+    document.getElementById('fallback').hidden=true;document.getElementById('licensePanel').hidden=false;fitFields();
   },{once:true});
+  addEventListener('resize',fitFields);
   addEventListener('pagehide',reset);
   addEventListener('pageshow',event=>{if(event.persisted)reset()});
 })();</script>
 <title>Your Formbell license key</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<style>*{box-sizing:border-box}html{color:#1c1c1e;background:#f7f7f8;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0;padding:40px 16px}main{max-width:560px;margin:0 auto;padding:24px;background:#fff;border:1px solid #e2e2e5;border-radius:12px}.brand{font-size:16px;font-weight:700;display:flex;align-items:center;gap:12px;margin-bottom:24px}.mark{display:block;width:32px;height:32px;flex:none}h1{font-size:24px;line-height:32px;font-weight:650;margin:0 0 16px}p{margin:0;color:#59616d}.instructions{margin-bottom:24px}.key-row{display:grid;gap:8px;margin-top:16px}.key-row:first-child{margin-top:0}label{font-size:13px;font-weight:600}textarea{display:block;width:100%;padding:12px;border:1px solid #7a8493;border-radius:8px;resize:none;background:#fff;color:#1c1c1e;overflow-wrap:anywhere;word-break:break-all;white-space:pre-wrap;font:14px/22px ui-monospace,SFMono-Regular,Consolas,monospace}button{justify-self:end;min-height:40px;padding:8px 16px;border:1px solid #1c1c1e;border-radius:8px;font:600 14px/22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.primary{background:#1c1c1e;color:#fff}.primary:hover{background:#333338}.primary:active{background:#101012}.secondary{background:#fff;color:#1c1c1e}.secondary:hover{background:#f1f2f4}.secondary:active{background:#e5e5e9}button:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #ffb300;outline-offset:3px}a{color:#1c1c1e;text-decoration:underline}#copyStatus{font-size:13px;margin-top:16px;min-height:20px}.help{font-size:13px;margin-top:16px}#fallback{color:#1c1c1e}[hidden]{display:none!important}@media(max-width:400px){body{padding:24px 16px}main{padding:24px 16px}h1{font-size:22px;line-height:30px}}</style>
+<style>*{box-sizing:border-box}html{color:#1c1c1e;background:#f7f7f8;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0;padding:40px 16px}main{max-width:560px;margin:0 auto;padding:24px;background:#fff;border:1px solid #e2e2e5;border-radius:12px}.brand{font-size:16px;font-weight:700;display:flex;align-items:center;gap:12px;margin-bottom:24px}.mark{display:block;width:32px;height:32px;flex:none}h1{font-size:24px;line-height:32px;font-weight:650;margin:0 0 16px;text-wrap:balance}p{margin:0;color:#59616d;text-wrap:balance}.instructions{margin-bottom:24px}.key-row{display:grid;gap:8px;margin-top:16px}.key-row:first-child{margin-top:0}label{font-size:13px;font-weight:600}textarea{display:block;width:100%;padding:12px;border:1px solid #7a8493;border-radius:8px;resize:none;background:#fff;color:#1c1c1e;overflow-wrap:anywhere;word-break:break-all;white-space:pre-wrap;font:14px/22px ui-monospace,SFMono-Regular,Consolas,monospace}button{justify-self:end;min-height:40px;padding:8px 16px;border:1px solid #1c1c1e;border-radius:8px;font:600 14px/22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}.primary{background:#1c1c1e;color:#fff}.primary:hover{background:#333338}.primary:active{background:#101012}.secondary{background:#fff;color:#1c1c1e}.secondary:hover{background:#f1f2f4}.secondary:active{background:#e5e5e9}button:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #ffb300;outline-offset:3px}a{color:#1c1c1e;text-decoration:underline}#copyStatus{font-size:13px;margin-top:16px;min-height:20px}.help{font-size:13px;margin-top:16px}#fallback{color:#1c1c1e}[hidden]{display:none!important}@media(max-width:400px){body{padding:24px 16px}main{padding:24px 16px}h1{font-size:22px;line-height:30px}}</style>
 </head>
 <body>
 <main>
