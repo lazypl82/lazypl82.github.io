@@ -1,7 +1,8 @@
 """Site metadata: one source of truth in _meta/pages.json.
 Run from the repo root: python3 _meta/build.py
 It rewrites the block between <!-- meta:start --> and <!-- meta:end --> in each page,
-sets <title> and the description, and writes robots.txt and sitemap.xml."""
+sets <title> and the description, and writes robots.txt and sitemap.xml.
+sitemap lastmod is written only when a page sets "lastmod" in pages.json (update it when the content changes)."""
 import json, re, html, datetime, subprocess, sys
 cfg = json.load(open('_meta/pages.json'))
 SITE = cfg['site']; IMG = SITE + cfg['default_image']; MP = cfg['marketplace']
@@ -60,13 +61,13 @@ for p in cfg['pages']:
              '<!-- meta:end -->')
     s = re.sub(r'(</title>)', r'\1\n' + block.replace('\\', '\\\\'), s, count=1)
     open(f, 'w', encoding='utf-8').write(s)
-    urls.append((url, lastmod(f), p.get('priority', '0.5')))
+    urls.append((url, p.get('lastmod'), p.get('priority', '0.5')))
 
 with open('robots.txt', 'w') as r:
     r.write('User-agent: *\n' + (''.join(f'Disallow: /{n}\n' for n in cfg['noindex']) or 'Allow: /\n') + f'\nSitemap: {SITE}/sitemap.xml\n')
 with open('sitemap.xml', 'w') as m:
     m.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
     for u, d, pr in urls:
-        m.write(f'  <url><loc>{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n')
+        m.write(f'  <url><loc>{u}</loc>' + (f'<lastmod>{d}</lastmod>' if d else '') + f'<priority>{pr}</priority></url>\n')
     m.write('</urlset>\n')
 print('pages', len(urls))
