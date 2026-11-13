@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="../assets/formbell-mark-f2.svg">
 <title>Confirm conference sign-ups from Google Forms | Formbell</title>
-<meta name="description" content="Send each family a confirmation email with the time they picked when they sign up for a parent-teacher conference in Google Forms. Works on Formbell's free plan.">
+<meta name="description" content="Email families who sign up for a parent-teacher conference in Google Forms, with their child's name and the time they chose. One Formbell rule, which you can run on the free plan.">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -16,8 +16,8 @@
 <main>
   <p class="kicker">For teachers</p>
   <h1>Confirm conference sign-ups with the time each family picked</h1>
-  <p class="dek">Families sign up in a Google Forms™ form. Each one gets an email that names their child and the slot they chose, so they don't have to remember it or ask again.</p>
-  <p class="soft">You need one Formbell rule, so the free plan is enough. If your school manages your Google account, your administrator may decide which add-ons you can install.</p>
+  <p class="dek">Families sign up in a Google Forms™ form. You can email the families who choose Yes, with their child's name and the time they picked.</p>
+  <p class="soft">This takes one rule. On Free you can run it as your one active rule across your Google account. If your school manages your Google account, your administrator may decide which add-ons you can install.</p>
 
   <h2>The form</h2>
   <p>Make a short form, or copy last term's, with these questions:</p>
@@ -25,29 +25,29 @@
     <li><span class="k">Student name</span><span class="v">short answer, required</span></li>
     <li><span class="k">Time slot</span><span class="v">multiple choice or dropdown, required</span></li>
     <li><span class="k">Attending</span><span class="v">multiple choice, required: Yes, No</span></li>
-    <li><span class="k">Email</span><span class="v">short answer with email validation, only if you don't collect email addresses</span></li>
+    <li><span class="k">Email</span><span class="v">short answer, required, with email validation, if you don't collect email addresses</span></li>
   </ul>
-  <p>Most families won't have a school Google account. If your form asks people to sign in, or only takes answers from your school's accounts, change that in the form's settings before you share the link.</p>
+  <p>If families use accounts outside your school, check that they can open and answer the form. Ask your administrator if you can't change who has access.</p>
 
   <h2>The rule</h2>
   <p class="rule">When <b>Attending</b> is <b>Yes</b>, email the person who filled in the form.</p>
-  <p>If the form collects email addresses, choose Email collected by Google Forms. Otherwise choose your Email question.</p>
+  <p>If the form collects email addresses, choose Email collected by Google Forms. If collection is off, or Formbell can't check it, choose your Email question.</p>
   <p>For the subject, try "Your conference time for" followed by the Student name answer. In the message, use Insert answer to add the student's name and the time slot. The email could read:</p>
   <blockquote>
     <p>Thank you for signing up. We'll meet about Alex at Tuesday 3:30 pm.</p>
     <p>If this time no longer works, reply to this email and we'll find another.</p>
   </blockquote>
   <p class="soft">Two families can still pick the same slot. Say you received their sign-up, and confirm the time yourself if slots can clash.</p>
-  <p>The <a href="personalized-confirmation-email.html">confirmation guide</a> walks through each screen, from creating the rule to sending yourself a test.</p>
+  <p>Follow the <a href="personalized-confirmation-email.html">confirmation guide</a> to create the rule and send yourself a test.</p>
 
   <h2>Before you send the link</h2>
   <ol>
     <li>Fill in the form yourself with your own email address.</li>
     <li>In Formbell, preview the email with that response and save the rule.</li>
-    <li>Turn alerts on and send yourself a test. On your first rule you may see Preview and test instead. Choose it to turn alerts on and send the test in one step.</li>
+    <li>If you see Preview and test on the rule, open it and confirm with Turn on alerts and send test. Otherwise turn alerts on, then choose Send me a test.</li>
     <li>Check that the email arrived the way you expect, then share the form.</li>
   </ol>
-  <p class="soft">Sent in the send log means Google accepted the email for sending. It doesn't tell you whether it reached the inbox. Google's daily sending limits apply, which matters for a large class.</p>
+  <p class="soft">Sent in the send log means Google accepted the email for sending. You can't tell from Sent whether it reached the inbox. Google's daily sending limits also apply, so check them for a large class.</p>
 
   <div class="cta"><a href="https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339">Install Formbell</a><span>Free plan included</span></div>
   <p class="soft">More examples: <a href="conditional-email-recipes.html">three forms that email the right person</a></p>
