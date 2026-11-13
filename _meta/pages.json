@@ -10,7 +10,7 @@
       "type": "website",
       "priority": "0.5",
       "title": "Lazy Labs: Formbell for Google Forms and Pollfold for Shopify",
-      "description": "Lazy Labs makes small, focused software. Formbell emails the right person when a Google Forms answer matches a rule. Pollfold runs post-purchase surveys across Shopify stores.",
+      "description": "Lazy Labs makes small, focused software. With Formbell, you can email the right person when a Google Forms answer matches a rule. With Pollfold, you can run post-purchase surveys across Shopify stores.",
       "jsonld": "organization"
     },
     {
@@ -19,7 +19,7 @@
       "type": "website",
       "priority": "1.0",
       "title": "Formbell: Conditional email notifications for Google Forms",
-      "description": "Formbell is a Google Forms add-on by Lazy Labs that emails the right person when an answer matches your rule. Conditional rules are included in the free plan. Pro is $4 a month or $29 a year.",
+      "description": "With Formbell, a Google Forms add-on by Lazy Labs, you can automatically email the right person when an answer matches your rule. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.",
       "jsonld": "software"
     },
     {
@@ -74,7 +74,5 @@
       "description": "Terms of Service for Formbell, the Google Forms add-on by Lazy Labs, including Pro subscriptions, cancellation and refunds."
     }
   ],
-  "noindex": [
-    "formbell/thank-you.html"
-  ]
+  "noindex": []
 }
