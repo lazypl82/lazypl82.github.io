@@ -63,7 +63,7 @@ for p in cfg['pages']:
     urls.append((url, lastmod(f), p.get('priority', '0.5')))
 
 with open('robots.txt', 'w') as r:
-    r.write('User-agent: *\n' + ''.join(f'Disallow: /{n}\n' for n in cfg['noindex']) + f'\nSitemap: {SITE}/sitemap.xml\n')
+    r.write('User-agent: *\n' + (''.join(f'Disallow: /{n}\n' for n in cfg['noindex']) or 'Allow: /\n') + f'\nSitemap: {SITE}/sitemap.xml\n')
 with open('sitemap.xml', 'w') as m:
     m.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
     for u, d, pr in urls:
