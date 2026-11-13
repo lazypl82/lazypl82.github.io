@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /formbell/thank-you.html
+
+Sitemap: https://formbell.app/sitemap.xml
